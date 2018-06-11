@@ -1,0 +1,12 @@
+<template name="search_box">
+    <form bindsubmit="bindSearch">
+    <view class="searchbox bgfff weui-cell">
+    
+        <input name="kw" value="{{kw}}" type="text" placeholder="请输入关键词搜索咨询" class="weui-flex__item" />
+        <button form-type="submit" class="searchbtn bgf55">
+            <icon class="weui-icon-search" type="search" size="14" color="#fff"></icon>
+            <text>搜索</text>
+        </button>
+    </view>
+    </form>
+</template>

@@ -1,0 +1,15 @@
+/* pages/lawyer/caseProcess.wxss */
+@import 'newCase.wxss';
+.row{
+  position: relative;
+}
+.change{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+.edit_change{
+  width: 24px;
+  height: 24px;
+}

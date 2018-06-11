@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/index",
+    "pages/my/collection",
+    "pages/my/my_prebook",
+    "pages/index/example",
+    "pages/index/shopinfo",
+    "pages/index/book",
+    "pages/student/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1b1b1b",
+    "navigationBarTitleText": "汽车维修",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#f42c2c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_on.png"
+      },
+      {
+        "pagePath": "pages/student/index",
+        "text": "招收学员",
+        "iconPath": "images/student.png",
+        "selectedIconPath": "images/student_on.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_on.png"
+      }
+    ]
+  }
+}

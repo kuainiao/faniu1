@@ -1,0 +1,12 @@
+<template name="item_lawyer_header">
+<view class="bgfff p10_15 borderTB item_lawyer_header">
+    <navigator url="../lawyer/lawyer" class="item_img mauto">
+        <view style="{{itemimg}}"></view>
+        <text hidden="{{!isvip}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+    </navigator>
+    <view class="item_l_tips"><view><text>{{name}}律师</text><text hidden="{{!isvip}}" class="vip" style="background:url({{vipicon}}) no-repeat center center;background-size:contain;"></text><text>{{region}}</text></view></view>
+    <view class="item_cc">{{company}}　执业证号：{{num}}</view>
+    <view class="weui-flex item_cc"><view class="weui-flex__item">帮助人数：<text class="fontClrf55">{{helped_num}}人</text></view><view class="weui-flex__item">关注人数：<text class="fontClr0dc">{{attention_num}}人</text></view></view>
+    <view class="weui-flex item_cc"><view class="weui-flex__item">付费咨询：<text class="fontClr0dc">{{paymoney}}元/次</text></view></view>
+</view>
+</template>

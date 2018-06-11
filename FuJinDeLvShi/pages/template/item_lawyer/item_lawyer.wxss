@@ -1,0 +1,5 @@
+.item_lw_box{color:#a0a0a0;text-align:justify;font-size:12px;line-height:22px;padding-left:5px;}
+.item_lw_cc{overflow:hidden;max-height:66px;word-wrap:break-word;}
+.item_lw_name{color:#333;font-size:14px;line-height:30px;}
+.item_lw_name text{float:left;margin-right:6px}
+.item_lw_attention{background-color:transparent;color:#0dcccc;font-size:12px;margin-top:0;padding-left:10px;padding-right:10px;}

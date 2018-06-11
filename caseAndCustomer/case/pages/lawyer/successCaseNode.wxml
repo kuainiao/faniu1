@@ -1,0 +1,27 @@
+<!--pages/lawyer/successCaseNode.wxml-->
+<view>
+  <view class="e_list">
+    <view class="item_content" wx:for="{{lawcaseMsgArray}}" wx:key="id">
+      <view class="e_item e_item_lawyer flex"  wx:if="{{item.islawyer==1}}">
+        <image class="head head_lawyer" src="{{item.avatar}}"></image>
+        <view class="flex_1">
+          <view class="font_12 color_9 mb_24">{{item.addtime}}</view>
+          <view wx:for="{{item.content}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="itemName" wx:if="{{item.msgtype==2}}">
+            <image src="{{itemName}}" class="file_img"></image>
+          </view>
+          <view class="font_14" wx:if="{{item.msgtype==1}}">{{item.content}}</view>
+        </view>
+      </view>
+      <view class="e_item e_item_customer flex" wx:if="{{item.islawyer==0}}">
+        <view class="flex_1 text_right">
+          <view class="font_12 color_9 mb_14 text_right">{{item.addtime}}</view>
+          <view wx:for="{{item.content}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="itemName" wx:if="{{item.msgtype==2}}">
+            <image src="{{itemName}}" class="file_img"></image>
+          </view>
+          <view class="font_14" wx:if="{{item.msgtype==1}}">{{item.content}}</view>
+        </view>
+        <image class="head head_customer" src="{{item.avatar}}"></image>
+      </view>
+    </view>
+  </view>
+</view>

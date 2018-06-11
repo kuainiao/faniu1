@@ -1,0 +1,8 @@
+<template name="mynone">
+
+<view class="pagebox tac my_none_box">
+  <view class="my_none_cc"><icon type="{{type}}" size="{{size}}" color="{{color}}"></icon><text class="none">{{tt}}</text></view>
+  <button url="{{btnurl}}" class="btn_f55 w75">{{btntext}}</button>
+</view>
+
+</template>

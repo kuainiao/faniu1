@@ -1,0 +1,11 @@
+<view class="mandate_box">
+    <view class='tac mandate_t'>
+        <view style='background:url(/img/avatar.jpg) no-repeat center center;background-size:cover;' class='img'></view>
+        <view class='t'>法妞问答</view>
+    </view>
+    <view class='tips01'>该程序将获取以下授权：</view> 
+    <view class='tips02'>●获得您的公开信息（昵称、头像等）</view> 
+    <view class='dis_flex tac btns'>
+    <button class='btn btn01' bindtap="bindReject">拒绝</button>
+    <button open-type='getUserInfo' bindgetuserinfo="bindLogin" class='btn btn02'>允许</button></view>
+</view>

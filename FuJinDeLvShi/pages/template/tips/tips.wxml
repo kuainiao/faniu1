@@ -1,0 +1,6 @@
+<template name="tips">
+    <view class="tipsbox overfh p10_15 borderT mt10 bgfff">
+      <view class="f14_clr999 fl">{{tips01}}</view>
+      <view class="fr" style="background:url(http://static.faniuwenda.com/weapp/images/n1.png) no-repeat right center;background-size:auto 14px;">{{tips02}}</view>
+    </view>
+</template>

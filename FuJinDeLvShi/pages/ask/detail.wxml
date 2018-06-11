@@ -1,0 +1,77 @@
+<!-- 当事人问题 -->
+<import src="../template/block/ask.wxml" />
+<template is="ask_detail" data="{{asker:asker,detail:detail}}"></template>
+
+<!-- 标题 -->
+<template is="tips" data="{{detail:detail,answer:answer,expert:expert,allowListen:allowListen}}"></template>
+
+<!-- 问答 -->
+<view class="bgfff borderTB p10_15 mb10">
+  <template is="ask_qa" data="{{asker:asker,expert:expert,answer:answer,replys:replys,allowListen:allowListen,playFile:playFile,playing:playing}}"></template>
+  <!-- 追问框 -->
+  <view wx:if="{{role ==1 && QA}}" class="lawyer_formbox">
+    <form bindsubmit="bindPump" report-submit="true">
+      <textarea name="content" class="bgf5" placeholder="你还可以继续向张三律师追问" />
+      <button form-type="submit" class="btn_f55 btn_0dc w50">向Ta追问</button>
+    </form>
+  </view>
+  <block wx:if="{{ADMIRE_AMOUNT}}">
+    <view class="btn_f55 w50 mauto" bindtap="bindTipbox">赞　赏</view>
+    <!--  赞赏列表  -->
+    <view wx:if="{{admireList.length>0}}" class="zanbox_tt tac">{{admireList.length}}人赞赏</view>
+    <view class="zanbox weui-flex">
+      <view wx:for="{{admireList}}" wx:key="guid" style="background:url({{item.avatar}}) no-repeat center center;background-size:cover;"></view>
+    </view>
+  </block>
+</view>
+<!-- 律师介绍 -->
+<view class="bgfff borderTB p10_15 mb10">
+  <view class="weui-flex">
+    <navigator url="/pages/lawyer/home?openid={{expert.openid}}" class="item_img">
+      <view style="background:url({{expert.avatar}}) no-repeat center center;background-size:cover;"></view>
+      <text wx:if="{{expert.groupid>=10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+    </navigator>
+    <view class="weui-flex__item item_lw_box">
+      <view class="fl item_lw_name overfh">
+        <text>{{expert.name}}律师</text>
+        <text wx:if="{{expert.groupid>=10}}" style="background:url({{expert.vipIcon}}) no-repeat center center;background-size:contain;" class="vip mt8"></text>
+        <text>{{expert.area}}</text>
+      </view>
+      <button class="weui-btn fr item_lw_attention" wx:if="{{isFollow}}">
+        <text>已关注</text>
+      </button>
+      <button class="weui-btn fr item_lw_attention" wx:else bindtap="bindFollow" data-openid="{{expert.openid}}">
+        <text>+ 关注</text>
+      </button>
+
+      <navigator url="/pages/lawyer/home?openid={{expert.openid}}" class="clear item_lw_cc">{{expert.introduce}}...</navigator>
+      <view>帮助人数：
+        <text class="fontClrf55 fontBold">{{expert.answer}}人</text>　关注人数：
+        <text class="fontClr0dc fontBold">{{expert.follow}}人</text>
+      </view>
+      <view class="weui-flex btns_con">
+        <navigator url="/pages/ask/post2?to={{expert.openid}}" class="weui-flex__item bgf55">
+          <text style="background:url(http://static.faniuwenda.com/weapp/images/icon_msg.png) no-repeat left center;background-size:24px auto;">向Ta咨询</text>
+        </navigator>
+        <navigator wx:if="{{expert.call_fee>0}}" url="/pages/call/post2?to={{expert.openid}}" class="weui-flex__item">
+          <text style="background:url(http://static.faniuwenda.com/weapp/images/icon_call.png) no-repeat left center;background-size:24px auto;">电话咨询</text>
+        </navigator>
+        <button wx:else bindtap="bindAlert" data-message="该律师暂未开通电话咨询服务" class="weui-flex__item">
+          <text style="background:url(http://static.faniuwenda.com/weapp/images/icon_call.png) no-repeat left center;background-size:24px auto;">电话咨询</text>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 赞赏弹窗 -->
+<view class="popbox" hidden="{{!tipboxvisible}}">
+  <view class="popbox_cc tac">
+    <view class="popbox_close" bindtap="bindTipbox">X</view>
+    <view class="popbox_tt">选择金额</view>
+    <radio-group class="radio-group weui-flex" bindchange="bindTip">
+      <label wx:for="{{ADMIRE_AMOUNT}}" wx:key="amid" class="radio"><radio value="{{item}}"/><view class="radioitem"><text>{{item}}</text> 元</view></label>
+    </radio-group>
+  </view>
+</view>
+<!-- 客服电话 -->
+<include src="../../template/widget/footer.wxml" />

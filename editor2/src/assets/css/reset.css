@@ -1,0 +1,164 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/**/
+.clearfix:before,.clearfix:after{
+  content: '';
+  display: table;
+}
+.clearfix:after{
+  clear: both;
+}
+.mb_20{
+  margin-bottom: 20px;
+}
+.mb_75{
+  margin-bottom: 75px;
+}
+.mb_14{
+  margin-bottom: 14px;
+}
+.text_left{
+  text-align: left;
+}
+.text_center{
+  text-align: center;
+}
+.text_right{
+  text-align: right;
+}
+.float_left{
+  float: left;
+}
+.font_f{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+.font_26{
+  font-size: 26px;
+}
+.font_16{
+  font-size: 16px;
+}
+.font_15{
+  font-size: 15px;
+}
+.font_14{
+  font-size: 14px;
+}
+.font_13{
+  font-size: 13px;
+}
+.font_12{
+  font-size: 12px;
+}
+.color_3{
+  color: #303133;
+}
+.color_6{
+  color: #606266;
+}
+.color_9{
+  color: #909399;
+}
+.color_f{
+  color: #fff;
+}
+.color_blue{
+  color: #409EFF;
+}
+.color_red{
+  color: red;
+}
+.line_h22{
+  line-height: 22px;
+}
+.line_h30{
+  line-height: 30px;
+}
+.bg_blue{
+  background-color: #409EFF;
+}
+.bg_black{
+  background-color: #545c64;
+}
+.bg_f{
+  background-color: #fff;
+}
+.pt_60{
+  padding-top: 60px;
+}
+.p_20{
+  padding: 20px;
+}
+.p_lr_10{
+  padding: 0 10px;
+}
+.mr_100{
+  margin-right: 100px;
+}
+.mr_20{
+  margin-right: 20px;
+}
+.mt_20{
+  margin-top: 20px;
+}
+.mb_40{
+  margin-bottom: 40px;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.h_30{
+  height: 30px;
+}
+.line_h60{
+  line-height: 60px;
+}

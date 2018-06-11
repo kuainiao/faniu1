@@ -1,0 +1,42 @@
+<!--pages/lawyer/chooseCustomer.wxml-->
+<view class="container min_height_100">
+  <form bindsubmit="smsMaskShow">
+    <view class="list">
+      <checkbox-group name="checkbox">
+        <view class="item" wx:for="{{litigantsArr}}" wx:key="id" >
+          <view class="item_l font_16 flex">
+            <view class="w_70">{{item.name}}</view>
+            <view class="flex_1">{{item.mobile}}</view>
+          </view>
+          <checkbox value="{{index}}" checked='{{item.selected==1}}'></checkbox>
+        </view>
+      </checkbox-group>
+    </view>
+    <view class="add clearfix" bindtap='addMaskShow'>
+      <image src='../../images/add.png' class="img"></image>
+    </view>
+    <button class="submit" formType="submit">确定</button>
+  </form>
+</view>
+<view class="mask {{add?'show':'hide'}}" bindtap='addMaskHide'></view>
+<view class="mask_container {{add?'show':'hide'}}">
+  <view class="title">添加当事人</view>
+  <form bindsubmit="litigantAdd">
+    <view class="input_row">
+      <input placeholder='姓名' class="name" name="name" value="{{name}}"/>
+      <input placeholder='手机号' class="tel" maxlength='11' type='number' name="mobile" value="{{mobile}}"/>
+    </view>
+    <view class="btn_box">
+      <button class="btn cancel" bindtap='addMaskHide'>取消</button>
+      <button class="btn sure" formType="submit">确认</button>
+    </view>
+  </form>
+</view>
+<!--<view class="mask {{sms?'show':'hide'}}" bindtap='smsMaskHide'></view>
+<view class="mask_container_msg {{sms?'show':'hide'}}">
+  <view class="text font_14">是否通知当事人加入案件？</view>
+  <view class="btn_box flex">
+    <view class="btn yes" bindtap='gotoNewCase'>是</view>
+    <view class="btn no bg_343241 color_f" bindtap='smsMaskHide'>否</view>
+  </view>
+</view>-->

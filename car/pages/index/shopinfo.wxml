@@ -1,0 +1,18 @@
+<view class='showinfo_t tac'>
+    <view style='background:url(/images/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+    <view class='name'>车豪二手车交易</view>
+</view>
+<view class='flex showinfo_items tac'>
+    <view wx:for="{{showinfo_items}}" wx:key="index" data-index="{{index}}" class='item {{activeOn==index?"on":""}}' bindtap='infoTap'>{{item}}</view>
+</view>
+<view class='showinfo_itemscc imgbox'>
+    <view hidden='{{activeOn!=0}}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aenean euismod bibendum laoreet.</view>
+    <view hidden='{{activeOn!=1}}'>Lorem ipsum dolor sit amet,<image src='/images/banner.png' mode='widthFix'></image></view>
+    <view hidden='{{activeOn!=2}}'>Lorem ipsum dolor sit amet laoreet.</view>
+    <view hidden='{{activeOn!=3}}'>Lorem ipsum dolor sit amet,consectetur adipiscing elit.Aenean euismod bibendum laoreet.<image src='/images/banner.png' mode='widthFix'></image></view>
+</view>
+
+<view class="online_consulting">
+  <image src="../../images/online_consulting.png" class="online_consulting_img"></image>
+  <button open-type="contact" class="online_consulting_btn"></button>
+</view>

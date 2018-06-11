@@ -1,0 +1,10 @@
+@import "../template/onlinebtn/onlinebtn.wxss";
+page{padding-bottom:160rpx;}
+.news_tt{color:#f9295d;font-size:14px;}
+.news_cc{font-size:14px;line-height:1.2rem;color:#353535;padding:0.3rem 0;text-align:justify;}
+.news_imgs{flex-wrap:wrap;}
+.news_imgs .img{width:30%;height:5rem;margin:0 1.65% 0.625rem 1.65%;}
+.news_fn{justify-content:flex-end;align-items:center;font-size:14px;color:#888;}
+.news_fn image{width:0.906rem;margin-right:0.2rem;margin-left:0.75rem;}
+.news_fn .flex{align-items:center;}
+.news_fn .on{color:#f9295d;}

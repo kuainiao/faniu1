@@ -1,0 +1,67 @@
+/* pages/buycar/detail.wxss */
+page{
+  background-color: #f3f4f6;
+}
+.btn_box{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  height: 100rpx;
+}
+.btn{
+  width: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.icon{
+  width: 36rpx;
+  height: 36rpx;
+}
+.btn_box_repeat{
+  height: 100rpx;
+}
+.item_img{
+  display: block;
+  width: 100%;
+}
+img{
+  margin: 20rpx 0;
+  width: 100%;
+  height: 20px;
+}
+.cell{
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdcdc;
+}
+.cell1{
+  border-right: 1px solid #dcdcdc;
+}
+.mod .row:last-child .cell{
+  border-bottom: none;
+}
+.car_color{
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
+  float: left;
+  margin: 5px;
+}
+.quan1{
+  width: 8px;
+  height: 8px;
+  background-color: #999;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 6px;
+}
+.quan2{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  box-sizing: border-box;
+  margin-right: 6px;
+}

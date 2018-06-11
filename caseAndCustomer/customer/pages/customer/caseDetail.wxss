@@ -1,0 +1,7 @@
+/* pages/customer/caseDetail.wxss */
+@import '../lawyer/caseDetail.wxss';
+.img_icon{
+  width: 25px;
+  height: 30px;
+  margin: 5px 20rpx 5px 0;
+}

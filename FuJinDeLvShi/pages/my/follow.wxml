@@ -1,0 +1,20 @@
+<!--pages/my_attention/my_attention.wxml-->
+<navigator hidden delta="1" class="tt" open-type="navigateBack"> 〈 我关注的律师</navigator>
+
+<!-- “我关注的律师”初始状态 -->
+<view wx:if="{{!isFollow}}">
+   <import src="../template/mynone/mynone.wxml" />
+   <template is="mynone" data="{{type:'warn',size:'50',color:'#f55',tt:'你还未关注过任何律师',btntext:'去关注律师',btnurl:'/pages/lawyer/index'}}"></template>
+</view>
+<!-- “我关注的律师”已关注状态 -->
+<block wx:else>
+    <view class="my_attention_tips">已关注律师<text>{{followCounts}}</text></view>
+    <!-- 关注的律师 -->
+    <import src="../template/item_lawyer/item_lawyer.wxml" />
+    <block wx:for="{{followList}}" wx:key="openid">
+    	<template is="item_lawyer" data="{{item}}"></template>
+    </block>
+</block>
+
+<!-- 客服电话 -->
+<include src="../../template/widget/footer.wxml" />

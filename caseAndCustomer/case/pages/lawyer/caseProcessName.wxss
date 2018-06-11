@@ -1,0 +1,2 @@
+/* pages/lawyer/caseProcessName.wxss */
+@import 'newCase.wxss';

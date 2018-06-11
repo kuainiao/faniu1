@@ -1,0 +1,3 @@
+.onlinebtn{position:fixed;right:16rpx;bottom:14rpx;width:134rpx;height:134rpx;border-radius:50%;background:#f9295d;justify-content:center;align-items:center;flex-direction:column;box-shadow:0 1px 5px 2px rgba(249,41,93,0.6);}
+.onlinebtn view{width:134rpx;font-size:24rpx;line-height:36rpx;color:#fff;}
+.onlinebtn image{width:51.56rpx;display:block;}

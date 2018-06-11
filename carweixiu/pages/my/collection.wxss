@@ -1,0 +1,13 @@
+@import "../template/shopitem/shopitem.wxss";
+@import "news.wxss";
+
+.ordersItems{justify-content:space-between;color:#353535;font-size:14px;line-height:2.2rem;margin-bottom:0.625rem;padding:0 22%;border-top:1px solid #d2d2d2;}
+.ordersItems .on{color:#f9295d;border-bottom:2px solid #f9295d;}
+.shopitems{padding:0.625rem 1.25rem;}
+.fl{float: left;}
+.flex {display: -webkit-box;display: -webkit-flex;display: flex;}
+.bgfff{background:#fff;}
+.p10{padding:0.625rem;}
+.oh{overflow: hidden;}
+.mt10{margin-top:0.625rem;}
+.fr{float:right;}

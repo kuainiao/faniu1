@@ -1,0 +1,22 @@
+<!--pages/sellcar/index.wxml-->
+<view class="banner">
+  <image src="../../images/sellcar_banner.jpg" class="banner_img"></image>
+</view>
+<view class="bg_f mb_30">
+  <view class="row flex p_lr_30 border_b_e3">
+    <view class="key font_14 color_3">手机号</view>
+    <input placeholder='您的手机号（必填）' class="flex_1 value font_14 color_3"></input>
+    <button class='font_14 color_3 gettel'>获取手机号</button>
+  </view>
+  <view class="row flex p_lr_30">
+    <view class="key font_14 color_3">车辆描述</view>
+    <input placeholder='如：14款奥迪A3，2万公里' class="flex_1 value font_14 color_3"></input>
+  </view>
+</view>
+<view class="p_30">
+  <button class="bg_theme color_f">预约卖车</button>
+</view>
+<view class="online_consulting">
+  <image src="../../images/online_consulting.png" class="online_consulting_img"></image>
+  <button open-type="contact" class="online_consulting_btn"></button>
+</view>

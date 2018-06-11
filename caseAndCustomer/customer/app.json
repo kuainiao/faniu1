@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/customer/index",
+    "pages/customer/caseList",
+    "pages/customer/lawyerList",
+    "pages/customer/caseDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#343241",
+    "navigationBarTitleText": "案件管理",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#f6f6f6"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#343241",
+    "list": [
+      {
+        "pagePath": "pages/customer/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homeS.png"
+      },
+      {
+        "pagePath": "pages/customer/caseList",
+        "text": "我的案件",
+        "iconPath": "images/case_nav.png",
+        "selectedIconPath": "images/caseS_nav.png"
+      },
+      {
+        "pagePath": "pages/customer/lawyerList",
+        "text": "我的律师",
+        "iconPath": "images/lawyer_nav.png",
+        "selectedIconPath": "images/lawyerS_nav.png"
+      }
+    ]
+  }
+}

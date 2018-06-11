@@ -1,0 +1,30 @@
+/* pages/customer/lawyerList.wxss */
+.list{
+  padding: 46rpx 30rpx 0;
+}
+.item{
+  display: flex;
+  margin-bottom: 26rpx;
+  height: 190rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 1px 1px #ccc;
+  box-sizing: border-box;
+  padding: 45rpx 50rpx;
+  background: #fff url('http://static.faniuwenda.com/lawcase/sysimg/bgline_y.png') repeat-y 0 0;
+}
+.item_l{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1px solid red;
+  margin-right: 16rpx;
+}
+.item_m{
+  flex: 1;
+}
+.item_r{
+  margin-top: 15rpx;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}

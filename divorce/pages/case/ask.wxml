@@ -1,0 +1,7 @@
+<!--pages/case/ask.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class="p_lr_36">
+    <textarea placeholder="请输入您想咨询的有关离婚的问题..." name="textarea" class='textarea font_14 color_3'/>
+    <button formType="submit" class="bg_theme color_f">提交</button>
+  </view>
+</form>

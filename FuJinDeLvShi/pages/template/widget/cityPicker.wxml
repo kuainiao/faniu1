@@ -1,0 +1,15 @@
+<!-- 地区选择 -->
+<view wx:if="{{cityPicker.show}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="background:#fff;" value="{{cityPicker.index}}" bindchange="bindCityPickerChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="bindCityPickerView" data-action="cancel" class="city-cancel">取消</view>
+      <view bindtap="bindCityPickerView" data-action="ok" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{cityPicker.data}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{cityPicker.citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

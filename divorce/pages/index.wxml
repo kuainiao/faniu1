@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view>
+  <view>
+    <image src="../images/index_banner.jpg" class="index_banner"></image>
+  </view>
+  <view class="tabs flex p_lr_20">
+    <view class="tab flex_1" bindtap='openAsk'>
+      <image src="../images/tab1.jpg"></image>
+    </view>
+    <view class="tab flex_1" bindtap='openCaseAsk'>
+      <image src="../images/tab2.jpg"></image>
+    </view>
+  </view>
+  <view class="index_ad">
+    <image src="../images/index_ad.jpg"></image>
+  </view>
+  <view class="flex p_lr_20 bg_f2 line_h40">
+    <view class="flex_1 color_6 font_14 text_left">热文推荐</view>
+    <view class="flex_1 color_6 font_14 text_right">更多>></view>
+  </view>
+  <view class="list p_lr_20">
+    <view class="item flex p_tb_20 v_mid">
+      <image src="" class="item_img"></image>
+      <view class='flex_1 font_12 color_3 ellipsis'>热点文章推荐热点文章推荐热点文章推荐热点文章推荐热点文章推荐</view>
+    </view>
+    <view class="item flex p_tb_20 v_mid">
+      <image src="" class="item_img"></image>
+      <view class='flex_1 font_12 color_3 ellipsis'>热点文章推荐热点文章推荐热点文章推荐热点文章推荐热点文章推荐</view>
+    </view>
+    <view class="item flex p_tb_20 v_mid">
+      <image src="" class="item_img"></image>
+      <view class='flex_1 font_12 color_3 ellipsis'>热点文章推荐热点文章推荐热点文章推荐热点文章推荐热点文章推荐</view>
+    </view>
+    <view class="item flex p_tb_20 v_mid">
+      <image src="" class="item_img"></image>
+      <view class='flex_1 font_12 color_3 ellipsis'>热点文章推荐热点文章推荐热点文章推荐热点文章推荐热点文章推荐</view>
+    </view>
+    <view class="item flex p_tb_20 v_mid">
+      <image src="" class="item_img"></image>
+      <view class='flex_1 font_12 color_3 ellipsis'>热点文章推荐热点文章推荐热点文章推荐热点文章推荐热点文章推荐</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+<!--pages/my_callconsult/my_callconsult.wxml-->
+<navigator hidden delta="1" class="tt" open-type="navigateBack"> 〈 我的电话咨询</navigator>
+
+<!-- “我的电话咨询”初始状态 -->
+<view wx:if="{{!isCall}}">
+   <!--<import src="../template/mynone/mynone.wxml" />-->
+   <!--<template is="mynone" data="{{type:'warn',size:'70',color:'#ddd',tt:'暂时还没有发布电话咨询',btntext:'我要电话咨询律师 >',btnurl:'/pages/lawyer/index'}}"></template>-->
+  <view class="pagebox tac my_none_box">
+    <view class="my_none_cc"><icon type="warn" size="70" color="#ddd"></icon><text class="none">暂时还没有发布电话咨询</text></view>
+      <button data-url="pages/lawyer/index" bindtap="gotolawyerIndex" class="btn_f55 w75">我要电话咨询律师</button>
+    </view>
+  </view>
+<!-- “我的电话咨询”有电话咨询状态 -->
+<block wx:else>
+    <!-- 等待确认 确认完成 状态 -->
+    <view wx:for="{{callList}}" wx:key="id" class="bgfff borderTB p10_15 mb10">
+        <view class="weui-flex">
+            <navigator url="/pages/lawyer/home?openid={{item.to}}" class="item_img">
+                <view style="background:url({{item.expert.avatar}}) no-repeat center center;background-size:cover;"></view>
+            </navigator>
+            <view class="weui-flex__item">
+                <view class="overfh my_call_name"><navigator url="/pages/lawyer/home?openid={{item.to}}" class="fl fontClr0dc">{{item.expert.area}} {{item.expert.name}}律师</navigator><text class="fl">{{item.money}}元/次</text>
+                    <text wx:if="{{item.status == 2}}" bindtap="bindPay" data-id="{{item.id}}" class="fr">立即支付</text>
+                    <text wx:elif="{{item.status == 3}}" class="fr">正在通知律师</text>
+                    <text wx:elif="{{item.status == 4}}" class="fr" data-id="{{item.id}}" bindtap="callFinish">确认完成</text>
+                    <text wx:else class="fr completed">已完成</text>
+                </view>
+                <view class="overfh my_call_tips"><view class="fl" hidden="{{item.status!=4}}">电话：<text>{{item.expert.tel}}</text></view><view class="fr">{{item.time}}</view></view>
+                <view class="weui-flex btns_con">
+                    <block wx:if="{{item.status != 4}}" ><navigator url="/pages/call/post2?to={{item.to}}" class="weui-flex__item bg0dc"><text style="background:url(http://static.faniuwenda.com/weapp/images/icon_call.png) no-repeat left center;background-size:24px auto;">电话咨询</text></navigator></block>
+                    <block wx:else ><view class="weui-flex__item bg0dc" data-tel="{{item.expert.tel}}" bindtap="bindtapCall"><text style="background:url(http://static.faniuwenda.com/weapp/images/icon_call.png) no-repeat left center;background-size:24px auto;">拨打电话</text></view></block>
+                    <navigator url="../ask/post2?to={{item.to}}" class="weui-flex__item bgf55"><text style="background:url(http://static.faniuwenda.com/weapp/images/icon_msg.png) no-repeat left center;background-size:24px auto;">向Ta咨询</text></navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>
+
+<!-- 客服电话 -->
+<include src="../../template/widget/footer.wxml" />

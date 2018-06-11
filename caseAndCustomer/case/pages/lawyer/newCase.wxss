@@ -1,0 +1,106 @@
+/* pages/lawyer/newCase.wxss */
+page{
+  height: 100%;
+}
+.row{
+  display: flex;
+}
+.key{
+  width: 70px;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.value{
+  min-height: 90rpx;
+  line-height: 90rpx;
+}
+.value_input{
+  flex: 1;
+  padding-left: 20rpx;
+  border: 1px solid #dadada;
+}
+.value_picker{
+  width: 272rpx;
+  padding-left: 20rpx;
+  border: 1px solid #dadada;
+  margin-right: 30rpx;
+  position: relative;
+}
+.value_picker::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  border-top: 6px solid #343241;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: none;
+  margin-top: -3px;
+}
+.value_subpicker{
+  
+}
+.list{
+  flex: 1;
+}
+.item{
+  float: left;
+  width: 180rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-right: 30rpx;
+  margin-bottom: 24rpx;
+  border: 1px solid #343241;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+.item_text{
+  text-align: left;
+  padding-left: 10px;
+  line-height: 90rpx;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+}
+.item_checkbox{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  opacity: 0;
+}
+.close_icon{
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  z-index: 102;
+  transform: translateY(-50%);
+}
+.item_add{
+  width: 90rpx;
+  height: 90rpx;
+  background-color: #d2d2d2;
+  border: none;
+}
+.item_add .add_icon{
+  width: 64rpx;
+  height: 64rpx;
+  margin: 13rpx;
+}
+.value_textarea{
+  flex: 1;
+  height: 260rpx;
+  border: 1px solid #dadada;
+  padding: 10rpx;
+  word-wrap:break-word;
+}

@@ -1,0 +1,4 @@
+/* pages/my_asked/my_asked.wxss */
+@import '../template/widget/footer.wxss';
+@import "../template/mynone/mynone.wxss";
+@import "../template/block/ask.wxss";

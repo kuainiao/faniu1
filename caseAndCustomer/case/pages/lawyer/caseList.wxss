@@ -1,0 +1,116 @@
+/* pages/lawyer/caseList.wxss */
+page{
+  background-color: #fff;
+}
+.container{
+  height: 100%;
+  padding: 30rpx 30rpx 0;
+}
+.fixed_con{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 14px 30rpx 0;
+  box-sizing: border-box;
+  z-index: 102;
+}
+.tabs{
+  display: flex;
+}
+.tab{
+  width: 160rpx;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  color: #343241;
+  background-color: #fff;
+  padding: 0;
+  border: 1px solid #343241;
+}
+.active{
+  color: #fff;
+  background-color: #343241;
+}
+.search_box{
+  margin: 16px 0;
+  height: 42px;
+  background-color: #eee;
+  position: relative;
+}
+.search_input{
+  height: 42px;
+  padding-left: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.search_icon{
+  width: 25px;
+  height: 42px;
+  padding: 0 10px;
+}
+.search_icon image{
+  margin: 10px 0;
+  width: 25px;
+  height: 22px;
+}
+.search_btn{
+  width: 45px;
+  height: 42px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 102;
+  opacity: 0;
+}
+.search_mask{
+  height: 42px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 103;
+  background-color: rgba(0,0,0,0.5);
+}
+.list{
+  padding-top: 118px; 
+}
+.item{
+  height: 240rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 0 1px 1px #ccc;
+  padding: 30rpx 30rpx 30rpx 60rpx;
+  box-sizing: border-box;
+  position: relative;
+  background: url('http://static.faniuwenda.com/lawcase/sysimg/bgline_b_4.png') repeat-y 0 0;
+  border-radius: 4px;
+}
+.btn{
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ef5a59;
+  border: none;
+  margin-left: 0;
+}
+.set_list{
+  display: flex;
+  position: absolute;
+  top: 120rpx;
+  right: 30rpx;
+  z-index: 101;
+}
+.set_item{
+  margin-left: 20rpx;
+  text-align: center;
+}
+.set_item image{
+  display: block;
+  width: 24px;
+  height: 24px;
+}

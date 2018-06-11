@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/lawyer/index",
+    "pages/lawyer/newCase",
+    "pages/lawyer/caseList",
+    "pages/lawyer/customerList",
+    "pages/lawyer/newCaseType",
+    "pages/lawyer/chooseCustomer",
+    "pages/lawyer/caseDetail",
+    "pages/lawyer/caseProcess",
+    "pages/lawyer/chooseProcessContent",
+    "pages/lawyer/caseProcessName",
+    "pages/lawyer/deleteCustomer",
+    "pages/lawyer/caseExamples",
+    "pages/lawyer/successCase",
+    "pages/lawyer/shareCase",
+    "pages/lawyer/successCaseNode",
+    "pages/lawyer/chooseSMSCustomer"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#343241",
+    "navigationBarTitleText": "案件管理",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#f6f6f6"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#343241",
+    "list": [
+      {
+        "pagePath": "pages/lawyer/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homeS.png"
+      },
+      {
+        "pagePath": "pages/lawyer/newCase",
+        "text": "创建案件",
+        "iconPath": "images/newcase_nav.png",
+        "selectedIconPath": "images/newcaseS_nav.png"
+      },
+      {
+        "pagePath": "pages/lawyer/caseList",
+        "text": "我的案件",
+        "iconPath": "images/case_nav.png",
+        "selectedIconPath": "images/caseS_nav.png"
+      },
+      {
+        "pagePath": "pages/lawyer/customerList",
+        "text": "我的当事人",
+        "iconPath": "images/customer_nav.png",
+        "selectedIconPath": "images/customerS_nav.png"
+      }
+    ]
+  }
+}

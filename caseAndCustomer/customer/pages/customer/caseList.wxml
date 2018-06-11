@@ -1,0 +1,14 @@
+<!--pages/customer/caseList.wxml-->
+<view class="list">
+  <view class="item" bindtap='gotoCaseDetail' wx:for="{{lawcasesArray}}" wx:key="id" data-id="{{item.id}}">
+    <view class="title_box font_14 bold mb_20">
+      <view class="title">{{item.title}}</view>
+      <view class="status text_right color_f39b07" wx:if="{{item.status==1}}">进行中</view>
+      <view class="status text_right color_54b7fa" wx:if="{{item.status==7}}">已结案</view>
+      <view class="status text_right color_54b7fa" wx:if="{{item.status==8}}">已结案</view>
+      <view class="status text_right color_44c74c" wx:if="{{item.status==9}}">成功案例</view>
+    </view>
+    <view class="font_12 color_9 mb_14">创建时间：{{item.addtime}}</view>
+    <view class="font_12 color_9">我的律师：{{item.name}}</view>
+  </view>
+</view>

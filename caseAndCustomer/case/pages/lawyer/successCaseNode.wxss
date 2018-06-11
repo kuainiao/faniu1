@@ -1,0 +1,2 @@
+/* pages/lawyer/successCaseNode.wxss */
+@import 'caseDetail.wxss';

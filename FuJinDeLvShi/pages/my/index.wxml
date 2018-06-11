@@ -1,0 +1,58 @@
+<!--pages/my/my.wxml-->
+<!-- 头部头像 -->
+<view class="bgfff p10_15 my_box tac">
+    <view class="my_box_img mauto">
+        <view style="background:url({{userDatas.headimgurl}}) no-repeat center center;background-size:cover;"></view>
+        <text hidden="{{userDatas.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+    </view>
+    <view class="my_name" wx:if="{{userDatas.checkStatus>0}}"><view><text>{{userDatas.nickname}}律师</text><text hidden="{{!isvip}}" class="vip" style="background:url(http://static.faniuwenda.com/weapp/images/vip.png) no-repeat center center;background-size:contain;"></text></view></view>
+    <view class="my_name" wx:else><view><text>{{userDatas.nickname}}</text></view></view>
+    <view wx:if="{{showListenIncome}}" class="my_tips">
+        <view>收听分成：<text class="fontClrf55">￥{{userDatas.listen_income}}</text></view>
+        <view>答案每被人收听一次您将获得<text class="fontClrf55">0.3元</text></view>
+        <view>每晚21点自动领取，入库微信钱包！</view>
+    </view>
+</view>
+
+<!-- 我的栏目 -->
+<view class="weui-cells weui-cells_after-title my_items">
+    <navigator url="ask" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="http://static.faniuwenda.com/weapp/images/icon_question.png"></image>
+        </view>
+        <view class="weui-cell__bd">我问过的问题</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="call" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="http://static.faniuwenda.com/weapp/images/icon_question.png"></image>
+        </view>
+        <view class="weui-cell__bd">我的电话咨询</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="listen" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="http://static.faniuwenda.com/weapp/images/icon_listened.png"></image>
+        </view>
+        <view class="weui-cell__bd">我听过的问题</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="follow" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="http://static.faniuwenda.com/weapp/images/icon_heart_active.png"></image>
+        </view>
+        <view class="weui-cell__bd">我关注的律师</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <view hidden="{{userDatas.checkStatus>0}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="openConfirm">
+        <view class="weui-cell__hd">
+            <image src="http://static.faniuwenda.com/weapp/images/icon_lawyer.png"></image>
+        </view>
+        <view class="weui-cell__bd">我是律师，申请入驻</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    
+</view>
+
+<!-- 客服电话 -->
+<include src="../../template/footer/footer.wxml" />

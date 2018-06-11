@@ -1,0 +1,14 @@
+<!--pages/index/shopinfo.wxml-->
+<image src="../../images/shopinfo_banner.jpg" class="shopinfo_banner"></image>
+<image src="" class="logo bg_theme"></image>
+<view class="font_14 color_0 mb_30 text_center">临沂汽车免喷漆凹陷玻璃修复</view>
+<view class="tabs border_b_e3 flex p_lr_30 p_tb_15 bg_f">
+  <view class="tab flex_1 text_center font_14 color_3 {{tab=='1'?'color_theme':''}}" bindtap='tabtap1'>品牌介绍{{tab}}</view>
+  <view class="tab flex_1 text_center font_14 color_3 {{tab=='2'?'color_theme':''}}" bindtap='tabtap2'>店铺实拍</view>
+</view>
+<view class="font_14 color_6 p_30 line_h24 bg_f {{tab=='1'?'show':'hide'}}">临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复</view>
+<view class="font_14 color_6 p_30 line_h24 bg_f {{tab=='2'?'show':'hide'}}">临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复临沂汽车免喷漆凹陷玻璃修复</view>
+<view class="onlineask">
+  <button open-type='contact'></button>
+  <image src="../../images/online.png"></image>
+</view>

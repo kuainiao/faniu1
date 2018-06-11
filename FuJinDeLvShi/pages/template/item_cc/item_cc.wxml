@@ -1,0 +1,27 @@
+
+<template name="item_cc">
+    <view class="weui-flex">
+        <navigator url="../lawyer/lawyer" class="item_img">
+            <view style="{{itemimg}}"></view>
+            <text hidden="{{!isvip}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+        </navigator>
+        <view class="weui-flex__item item_audio overfh">
+            <navigator url="{{url}}" class="item_au_cc fl" style="background:url(http://static.faniuwenda.com/weapp/images/audio_bg.png) no-repeat left center;background-size:contain;">
+                <view class="item_cc_num">{{tt}}</view>
+            </navigator>
+            <view class="item_au_num fl">{{num}}"</view>
+            <view class="item_au_num fl clear">{{time}}</view>
+        </view>
+    </view>
+</template>
+
+<template name="item_user">
+    <view class="weui-flex">
+        <view class="weui-flex__item item_ans_box" style="background:url(http://static.faniuwenda.com/weapp/images/ansbox_bg.png) no-repeat right 30px;background-size:15px auto;">
+            <view class="item_ans_cc">{{content}}</view>
+        </view>
+        <view class="item_img">
+            <view style="{{itemimg}}"></view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,6 @@
+<template name="banner">
+  <navigator url="/pages/ask/post" open-type="switchTab" class="ad_form_box tac textstyle14_22" style="background-image:url('http://static.faniuwenda.com/weapp/images/ad_bg.png');">
+    <view class="fontClr0dc">法妞问答—专注法律行业的语音问答平台</view>
+    <view class="fontClrf55"><text>点击快速发布法律问题</text> > </view>
+  </navigator>
+</template>

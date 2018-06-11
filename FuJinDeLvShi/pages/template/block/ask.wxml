@@ -1,0 +1,140 @@
+<template name="ask_list">
+  <navigator url="{{item.url}}" class="item_tt">{{item.title}}
+    <text wx:if="{{item.paystatus==1}}" class="fr fontClrf55">￥{{item.money}}</text>
+  </navigator>
+  <view class="item_tips">
+    <view>{{item.name}}律师</view>
+    <text class="{{item.groupid>=10?'vip':''}}" style="background:url({{item.vipIcon}}) no-repeat center center;background-size:contain;"></text>
+    <view>{{item.expertArea}}</view>
+    <view>{{item.firm}}</view>
+  </view>
+  <view class="weui-flex">
+    <navigator url="{{item.homepage}}" class="item_img">
+      <view style="background:url({{item.avatar}}) no-repeat center center;background-size:cover;"></view>
+      <text hidden="{{item.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+    </navigator>
+    <navigator url="{{item.url}}" class="item_audio weui-flex__item">
+      <view class="item_au_cc fl" style="background:url(http://static.faniuwenda.com/weapp/images/audio_bg.png) no-repeat left center;background-size:contain;">{{item.allowListen==1 ? '点击收听':'1元收听'}}</view>
+      <view class="item_au_num fr">
+        <text>{{item.listen}}</text>人收听</view>
+    </navigator>
+  </view>
+</template>
+<template name="ask_detail">
+  <view class="bgfff borderTB p10_15 mb10">
+    <view class="user_tt weui-flex">
+      <view class="item_img">
+        <view style="background:url({{asker.avatar}}) no-repeat center center;background-size:cover;"></view>
+      </view>
+      <view class="user_tt_name weui-flex__item">
+        <text class="fl">{{asker.nickname}}</text>
+        <text wx:if="{{detail.paystatus==1}}" class="fr fontClrf55">{{detail.money}}元</text>
+      </view>
+    </view>
+    <view class="user_cc">{{detail.content}}</view>
+    <view class="area_tips pb10">
+      <text>{{detail.area}}</text>
+      <text>{{detail.catname}}</text>
+      <text wx:if="{{detail.date}}">{{detail.date}}</text>
+    </view>
+  </view>
+</template>
+<template name="answer_list">
+  <view class="bgfff borderTB p10_15 mb10 ans_list_n1">
+    <view class="item_tips">
+      <view>{{item.name}}律师</view>
+      <text class="{{item.groupid>=10?'vip':''}}" style="background:url({{item.vipIcon}}) no-repeat center center;background-size:contain;"></text>
+      <view>{{item.area}}</view>
+      <view>{{item.firm}}</view>
+    </view>
+    <view class="weui-flex">
+      <navigator url="/pages/lawyer/home?openid={{item.openid}}" class="item_img">
+        <view style="background:url({{item.avatar}}) no-repeat center center;background-size:cover;"></view>
+        <text hidden="{{item.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+      </navigator>
+      <navigator url="/pages/ask/detail?id={{item.id}}" class="item_audio weui-flex__item">
+        <view class="item_au_cc fl" style="background:url(http://static.faniuwenda.com/weapp/images/audio_bg.png) no-repeat left center;background-size:contain;">{{item.allowListen ? '点击收听':'1元收听'}}</view>
+        <view class="item_au_long fl">{{item.media_duration}}"</view>
+        <view wx:if="{{detail.paystatus==1 && detail.best_aid == item.id}}" class="item_au_num fr cup" style="background:url(http://static.faniuwenda.com/weapp/images/n1.png) no-repeat center top;background-size:auto 16px;">
+          <text>{{item.listen}}</text>人收听</view>
+        <view wx:else class="item_au_num fr">
+          <text>{{item.listen}}</text>人收听</view>
+      </navigator>
+    </view>
+  </view>
+</template>
+<template name="tips">
+  <view class="tipsbox overfh p10_15 borderT mt10 bgfff">
+    <view class="f14_clr999 fl">{{allowListen ? '收听' : '1元收听'}}{{expert['name']}}律师的所有语音解答</view>
+    <view class="fr" wx:if="{{detail.best_aid == answer.id}}" style="background:url(http://static.faniuwenda.com/weapp/images/n1.png) no-repeat right center;background-size:auto 14px;">{{answer['listen']}}人已收听</view>
+    <view class="fr" wx:else>{{answer['listen']}}人已收听</view>
+  </view>
+</template>
+<template name="ask_qa">
+  <view class="weui-flex">
+    <navigator url="/pages/lawyer/home?openid={{expert.openid}}" class="item_img">
+      <view style="background:url({{expert.avatar}}) no-repeat center center;background-size:cover;"></view>
+      <text hidden="{{expert.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+    </navigator>
+    <view class="weui-flex__item item_audio overfh">
+      <view bindtap="bindPlay" data-file="{{answer.mediaurl}}" class="item_au_cc fl" style="background:url(http://static.faniuwenda.com/weapp/images/audio_bg.png) no-repeat left center;background-size:contain;">
+        <view wx:if="{{allowListen}}" class="item_cc_num">
+          {{playFile == answer.mediaurl ? (playing ? '播放中...' : '暂停播放') : '立即播放'}}
+        </view>
+        <view wx:else class="item_cc_num">1元收听</view>
+      </view>
+      <view class="item_au_num fl">{{answer.media_duration}}"</view>
+      <view class="item_au_num fl clear">{{answer.time}}</view>
+    </view>
+  </view>
+  <block wx:for="{{replys}}" wx:key="id">
+    <block wx:if="{{item.type == 2}}">
+      <view class="weui-flex">
+        <navigator url="/pages/lawyer/home?openid={{expert.openid}}" class="item_img">
+          <view style="background:url({{expert.avatar}}) no-repeat center center;background-size:cover;"></view>
+          <text hidden="{{expert.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+        </navigator>
+        <view class="weui-flex__item item_audio overfh">
+          <view bindtap="bindPlay" data-file="{{item.mediaurl}}" class="item_au_cc fl" style="background:url(http://static.faniuwenda.com/weapp/images/audio_bg.png) no-repeat left center;background-size:contain;">
+            <view wx:if="{{allowListen}}" class="item_cc_num">
+              {{playFile == item.mediaurl ? (playing ? '播放中...' : '暂停播放') : '立即播放'}}
+            </view>
+            <view wx:else class="item_cc_num">1元收听</view>
+          </view>
+          <view class="item_au_num fl">{{item.media_duration}}"</view>
+          <view class="item_au_num fl clear">{{item.time}}</view>
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:for="{{replys}}" wx:key="id">
+    <block wx:if="{{item.type == 3}}">
+      <view class="weui-flex">
+        <view class="weui-flex__item item_ans_box" style="background:url(http://static.faniuwenda.com/weapp/images/ansbox_bg.png) no-repeat right 30px;background-size:15px auto;">
+          <view class="item_ans_cc">{{item.content}}</view>
+        </view>
+        <view class="item_img">
+          <view style="background:url({{asker.avatar}}) no-repeat center center;background-size:cover;"></view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{item.type == 4}}">
+      <view class="weui-flex">
+        <navigator url="/pages/lawyer/home?openid={{expert.openid}}" class="item_img">
+          <view style="background:url({{expert.avatar}}) no-repeat center center;background-size:cover;"></view>
+          <text hidden="{{expert.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+        </navigator>
+        <view class="weui-flex__item item_audio overfh">
+          <view bindtap="bindPlay" data-file="{{item.mediaurl}}" class="item_au_cc fl" style="background:url(http://static.faniuwenda.com/weapp/images/audio_bg.png) no-repeat left center;background-size:contain;">
+            <view wx:if="{{allowListen}}" class="item_cc_num">
+              {{playFile == item.mediaurl ? (playing ? '播放中...' : '暂停播放') : '立即播放'}}
+            </view>
+            <view wx:else class="item_cc_num">1元收听</view>
+          </view>
+          <view class="item_au_num fl">{{item.media_duration}}"</view>
+          <view class="item_au_num fl clear">{{item.time}}</view>
+        </view>
+      </view>
+    </block>
+  </block>
+</template>

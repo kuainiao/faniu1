@@ -1,0 +1,12 @@
+<!--pages/ask/ask.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class="p_lr_36">
+    <textarea placeholder="请输入你想咨询的问题或关键词...（如协议离婚）" name="textarea" class='textarea font_14 color_3'/>
+    <button formType="submit" class="bg_theme color_f">提交</button>
+  </view>
+</form>
+<view class='color_6 font_14 p_lr_36 line_h40 bg_f2 mt_50'>历史问答</view>
+<view class='list p_lr_36'>
+  <view class='item line_h40 color_6 font_12' bindtap='openAskDetail'>1.协议离婚的条件是什么？</view>
+  <view class='item line_h40 color_6 font_12' bindtap='openAskDetail'>2.怎样争取孩子的抚养权？</view>
+</view>

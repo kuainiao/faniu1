@@ -1,0 +1,50 @@
+<!--pages/moreLawyer/moreLawyer.wxml-->
+<view class='container'>
+  <view class="tabs">
+    <view class="tab tab1 address_box">
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key='name' class="font_16">{{area}}<i></i></picker>
+    </view>
+    <view class="tab tab2 specialty_box">
+      <picker class="font_16" bindchange="bindPickerChange" value="{{tabIndex}}" range="{{tabList}}" range-key='name'>{{categorys}}<i></i></picker>
+    </view>
+  </view>
+  <!--列表开始-->
+  <view class='list'>
+    <view class="item" catchtap="gotoLawyerDetail" wx:for="{{lawyerList}}" wx:key='userid' data-isreg="{{item.isreg}}" data-callFee='{{item.call_fee}}' data-userid="{{item.userid}}">
+      <view class="item_l">
+        <image src="{{item.avatar}}"></image>
+      </view>
+      <view class="item_r">
+        <text class="tohere" catchtap="gotomapOfficeAddress" data-latitude="{{item.lat}}" data-longitude="{{item.lng}}" data-address="{{item.address}}">到这儿去>></text>
+        <view class="margin_b_10">
+          <text class="title font_16 color_3 margin_r_10">{{item.name}}</text>
+          <text class="subtitle font_12 color_3 margin_r_10">{{item.area}}</text>
+          <!--
+          <image wx:if="{{item.groupid==10}}" class="vvip margin_r_10" src="../../img/vip.png"></image>
+          <image wx:if="{{item.groupid==20}}" class="vvip margin_r_10" src="../../img/svip.png"></image>
+          <image wx:if="{{item.groupid==30}}" class="vvip margin_r_10" src="../../img/vvip.png"></image>
+          -->
+          <text class="subtitle font_12 color_3 margin_r_10">{{item.distance==0?'附近':(item.distance/1000)}}<text class="{{item.distance==0?'hide':'showinline'}}">km</text></text>
+        </view>
+        <view class="des font_12 color_9">{{item.intro}}</view>
+        <view hidden='{{true}}'>
+          <text class="font_12 color_9 margin_r_10">帮助人数：<text class="color_pink">{{item.answer}}人</text></text>
+          <text class="font_12 color_9">关注人数：<text class="color_pink">{{item.answer }}人</text></text>
+        </view>
+        <view class="btn_box" hidden='{{true}}'>
+          <view class='btn btn1 bg_pink color_f font_14' catchtap='gotopostask' data-isreg="{{item.isreg}}" data-callFee='{{item.call_fee}}' data-openid="{{item.userid}}"><image src="../../img/talk_w.png"></image>向Ta咨询</view>
+          <view class="btn btn2 bg_orange color_f font_14" catchtap='gotolawyerDetailCall' data-isreg="{{item.isreg}}" data-callFee='{{item.call_fee}}' data-openid="{{item.userid}}" data-tel="{{item.tel}}"><image src="../../img/tel_w.png"></image>电话咨询</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--列表结束-->
+  <!--<view class="text_center color_9 font_12 margin_b_20">
+    <view>
+      <text>技术支持：法妞问答</text>
+    </view>
+    <view>
+      <text>客服热线：4006-188-116</text>
+    </view>
+  </view>-->
+</view> 

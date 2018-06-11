@@ -1,0 +1,7 @@
+@import '../template/widget/footer.wxss';
+.formmsg_tt{padding-top:30px;font-weight:bold;}
+.formmsg_btn{    width: 86%;
+    margin: 0 auto;
+    box-sizing: border-box;margin-top:80px;}
+    .formmsg_tips{text-align: left;font-size: 14px;
+    line-height: 44px;color: #888;}

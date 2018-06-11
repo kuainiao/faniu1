@@ -1,0 +1,81 @@
+<!--pages/claim/claim.wxml-->
+<view class="container">
+  <view class="title"><text class="font_18">申请成为律师</text></view>
+  <form bindsubmit='formSubmit'>
+    <view class="form_box">
+      <view class="row">
+          <view class="key star">您的姓名：</view>
+          <view class="value name"><input type="text" value='{{detailMsg.name}}' name="name" /></view>
+      </view>
+      <view class="row">
+          <view class="key star">手机号码：</view>
+          <view class="value mobile"><input type="number" value='{{detailMsg.tel}}'name="mobile" maxlength='11' /></view>
+      </view>
+      <view class="row">
+          <view class="key star">电子邮箱：</view>
+          <view class="value email"><input type="text" value='{{detailMsg.email}}' name="email" /></view>
+      </view>
+      <view class="row">
+          <view class="key star">执业证号：</view>
+          <view class="value no"><input type="text" value='{{detailMsg.no}}' name="no" /></view>
+      </view>
+      <view class="row">
+          <view class="key star">执业律所：</view>
+          <view class="value firm"><input type="text" value='{{detailMsg.firm}}' name="firm" /></view>
+      </view>
+      <view class="row">
+          <view class="key star">所在地区：</view>
+          <view class="value_address">
+              <picker name="areaid1" class="picker1 areaid" bindchange="bindProvinceChange" value="{{provinceIndex}}" range='{{provinceArray}}' range-key='name'>
+                  <i></i>
+                  <view>{{provinceArray[provinceIndex].name}}</view>
+              </picker>
+              <picker name="areaid2" class="picker2 areaid" bindchange="bindCityChange" value="{{cityIndex}}" range='{{cityArray}}' range-key='name'>
+                  <i></i>
+                  <view>{{cityArray[cityIndex].name}}</view>
+              </picker>
+              <picker name="areaid3" class="picker3 areaid" bindchange="bindAreaChange" value="{{areaIndex}}" range='{{areaArray}}' range-key='name'>
+                  <i></i>
+                  <view>{{areaArray[areaIndex].name}}</view>
+              </picker>
+          </view>
+      </view>
+      <view class="row">
+          <view class="key star">详细地址：</view>
+          <view class="value"><input type="text" value='{{detailMsg.address}}' name="address" class="address"/></view>
+      </view>
+      <view class="row">
+          <view class="key star">擅长领域：</view>
+          <view class="value_checkbox">
+              <view class="txt">最多可选4项</view>
+              <view>
+                  <checkbox-group name="catids" >
+                      <label wx:for="{{tabList}}" wx:key="id">
+                          <checkbox value="{{item.id}}" checked="{{item.checked}}" class="catids"/>
+                          {{item.name}}
+                      </label>
+                  </checkbox-group>
+              </view>
+          </view>
+      </view>
+      <view class="row">
+          <view class="key star">执业证书：</view>
+          <view class="value_image">
+              <text class="color_0 bg_orange choose_image" bindtap='updataImg'>上传执行证书</text>
+              <image src="{{imgSrc}}" class="imgSrc {{imgshow}}"></image>
+              <view class="font_12 color_9">注：上传的图片格式要求为jpg/bmp/jpeg/gif,图片不超过2m</view>
+          </view>
+      </view>
+      <view class="row">
+          <view class="key star">您的简介：</view>
+          <view class="value_textarea intro"><textarea placeholder='简介不超过200字' name="intro" value="{{detailMsg.intro}}"></textarea></view>
+      </view>
+      <view class="row">
+          <view class="key"></view>
+          <view class="value_btn">
+              <button class="btn" formType="submit">申请成为律师</button>
+          </view>
+      </view>
+    </view>
+  </form>
+</view>

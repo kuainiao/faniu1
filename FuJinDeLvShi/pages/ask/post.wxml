@@ -1,0 +1,56 @@
+<!--pages/ask/post.wxml-->
+<!-- 头部广告 -->
+<!--
+<view class="release_ad" style="background: url(http://static.faniuwenda.com/lbs/wxaimg/applybanner.jpg) no-repeat center center;background-size:cover;">
+    <view class="fontBold"><text>截至目前法妞问答</text>{{lawyerAmount}}位优秀律师</view>
+    <view>已经为30000000+当事人解决了法律问题</view>
+</view>
+-->
+<!-- 步骤提示 -->
+<view class="release_tips overfh">
+    <view class="release_cc"><view>描述并发布问题</view><text>1</text></view>
+    <view class="release_cc"><view>律师语音回复</view><text>2</text></view>
+    <view class="release_cc"><view>收听答案</view><text>3</text></view>
+    <text class="release_line"></text>
+</view>
+<!-- 表单 -->
+<view class="bgfff p10_15 mt10">
+  <form bindsubmit="bindAskPost" report-submit="true">
+    <view class="weui-flex formitem mb10">
+        <view class="form_tt star">咨询内容</view>
+        <view class="weui-flex__item"><textarea name="content" value="{{askConent}}" placeholder="请详细描述你所遇到的问题（不少于10个字），以便律师能够详细了解您的问题原因，给出针对性的语音解答。" /></view>
+    </view>
+
+    <view class="weui-flex formitem mb10">
+        <view class="form_tt star">问题分类</view>
+        <view class="weui-flex__item">
+            <picker bindchange="bindPickerCat" value="{{catIndex}}" range="{{cats}}">{{cats[catIndex]}}<text class="arr">▼</text></picker>
+        </view>
+    </view>
+<!--
+    <view class="weui-flex formitem">
+        <view class="form_tt star">选择地区</view>
+        <view class="weui-flex__item">
+            <view class="area" data-action="open" bindtap="bindCityPickerView">{{cityPicker.city}}</view><text class="arr attarea">▼</text>
+        </view>
+    </view>
+-->
+    <view class="weui-flex formitem mb10"><view class="tips pl82">（律师回复后第一时间通知您！）</view></view>
+
+    <view class="weui-flex formitem mb10">
+        <view class="form_tt star">手机号码</view>
+        <view class="weui-flex__item"><input name="mobile" type="number" maxlength='11'/></view>
+    </view>
+<!--
+    <view class="weui-flex formitem mb10">
+        <view class="form_tt star">支付费用</view>
+        <view class="weui-flex__item">
+            <picker bindchange="bindPickerReward" value="{{rewardsIndex}}" range="{{rewards}}">{{rewards[rewardsIndex]}}<text class="arr">▼</text></picker>
+        </view>
+    </view>
+    <view class="weui-flex formitem mb10"><view class="tips tac">（请根据您咨询问题的紧急和重要程度选择悬赏金额）</view></view>
+-->
+    <view class="weui-flex formitem mb10"><button form-type="submit" type="submit" class="btn_submit w50">确认提交</button></view>
+
+  </form>
+</view>

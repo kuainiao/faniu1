@@ -1,0 +1,32 @@
+<view class="flex ordersItems bgfff font_14"><view wx:for="{{colItems}}" wx:key="index" data-index='{{index}}' class="{{activeColOn==index?'on':''}} font_14" bindtap='colTap'>{{item}}</view></view>
+
+<view class='flex shopitems bgfff' hidden='{{activeColOn!=0}}'>
+  <import src="../template/shopitem/shopitem02.wxml"/>
+    <template is="shopitem" data="{{url: '../shop/content',img:'/images/replaceable/banner.png',name:'青春定格重睑术，打造清新迷人',price:'399'}}"/>
+    <template is="shopitem" data="{{url: '../shop/content',img:'/images/replaceable/banner.png',name:'青春定格重睑术',price:'399'}}"/>
+    <template is="shopitem" data="{{url: '../shop/content',img:'/images/replaceable/banner.png',name:'青春定格重睑术，打造清新迷人',price:'399'}}"/>
+</view>
+
+<view class='flex shopitems bgfff' hidden='{{activeColOn!=1}}'>
+  <import src="../template/shopitem/shopitem01.wxml"/>
+  <template is="service" data="{{url: '../service/content',img:'/images/replaceable/banner.png',name:'激光脱毛，告别毛茸茸，脱出净滑肌',price:'399',memberprice:'299'}}"/>
+  <template is="service" data="{{url: '../service/content',img:'/images/replaceable/banner.png',name:'【外切法去眼袋】清晰周轮清晰周轮清晰周轮清晰周轮清晰周轮',price:'1399',memberprice:'899'}}"/>
+  <template is="service" data="{{url: '../service/content',img:'/images/replaceable/banner.png',name:'【外切法去眼袋】清晰周轮清晰周轮清晰周轮清晰周轮清晰周轮',price:'1399',memberprice:'899'}}"/>
+</view>
+
+<view class='mt10 bgfff p10' wx:for="{{newsItems}}" hidden='{{activeColOn!=2}}' wx:key="index">
+  <view class='tac news_tt font_14'>{{item.name}}</view>
+  <view class='news_cc font_14 color_3'>{{item.cc}}</view>
+  <view class='flex news_imgs' wx:if="{{item.isimgs}}">
+      <view style='background:url(/images/replaceable/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+      <view style='background:url(/images/replaceable/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+      <view style='background:url(/images/replaceable/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+      <view style='background:url(/images/replaceable/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+      <view style='background:url(/images/replaceable/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+  </view>
+  <view class='news_v mb10 text_center mb_20' wx:else><video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video></view>
+  <view class='flex news_fn'>
+      <view bindtap="{{item.iszaned?'haszaned':'gotozan'}}" data-index='{{index}}' class="flex {{item.iszaned?'on':''}}"><image src='/images/icon_zan{{item.iszaned?"_on":""}}.png' mode='widthFix'></image><text>{{item.numzan}}</text></view>
+      <view bindtap="{{item.iscollected?'colconcel':'gotocollect'}}" data-index='{{index}}' class="flex {{item.iscollected?'on':''}}"><image src='/images/icon_collection{{item.iscollected?"_on":""}}.png' mode='widthFix'></image><text>{{item.numcol}}</text></view>
+  </view>
+</view>

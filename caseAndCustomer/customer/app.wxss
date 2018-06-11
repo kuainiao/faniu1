@@ -1,0 +1,183 @@
+/**app.wxss**/
+page{
+  min-height: 100%;
+  background-color: #f6f6f6;
+}
+.container{
+  height: 100%;
+  padding: 30rpx 30rpx 0;
+  box-sizing: border-box;
+}
+.min_height_100{
+  height: 100%;
+}
+.height_100{
+  height: 100%;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.clearfix::before,.clearfix::after{
+  content: "";
+  display: table;
+}
+.clearfix::after{
+  clear: both;
+}
+.fl{
+  float: left;
+}
+.bg_f{
+  background-color: #fff;
+}
+.bg_f39b07{
+  background-color: #f39b07;
+}
+.bg_343241{
+  background-color: #343241;
+}
+.bg_ef5a59{
+  background-color: #ef5a59;
+}
+.mb_12{
+  margin-bottom: 12rpx;
+}
+.mb_14{
+  margin-bottom: 14rpx;
+}
+.mb_20{
+  margin-bottom: 20rpx;
+}
+.mb_24{
+  margin-bottom: 24rpx;
+}
+.mb_60{
+  margin-bottom: 60rpx;
+}
+.mt_40{
+  margin-top: 40rpx;
+}
+.mr_46{
+  margin-right: 46rpx;
+}
+.plr_30{
+  padding: 0 30rpx;
+}
+.color_f{
+  color:#fff;
+}
+.color_0{
+  color:#000;
+}
+.color_3{
+  color:#333;
+}
+.color_6{
+  color:#666;
+}
+.color_9{
+  color:#999;
+}
+.color_e6090e{
+  color: #e6090e;
+}
+.color_f39b07{
+  color: #f39b07;
+}
+.color_54b7fa{
+  color: #54b7fa;
+}
+.color_44c74c{
+  color: #44c74c;
+}
+.font_12{
+  font-size: 12px;
+}
+.font_13{
+  font-size: 13px;
+}
+.font_14{
+  font-size: 14px;
+}
+.font_16{
+  font-size: 16px;
+}
+.font_18{
+  font-size: 18px;
+}
+.font_20{
+  font-size: 20px;
+}
+.font_26{
+  font-size: 26px;
+}
+.font_30{
+  font-size: 30px;
+}
+.text_center{
+  text-align: center;
+}
+.text_right{
+  text-align: right;
+}
+.bold{
+  font-weight: bold;
+}
+.flex{
+  display: flex;
+}
+.flex_1{
+  flex: 1;
+}
+.w_70{
+  width: 70px;
+}
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 100;
+}
+.submit{
+  margin-top: 130rpx;
+  background-color: #343241;
+  color: #fff;
+}
+.mask_container_msg{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-top: -153rpx;
+  margin-left: -305rpx;
+  width: 610rpx;
+  height: 306rpx;
+  z-index: 101;
+  background-color: #fff;
+}
+.mask_container_msg .text{
+  height: 204rpx;
+  line-height: 204rpx;
+  text-align: center;
+}
+.mask_container_msg .btn_box{
+  height: 102rpx;
+  box-sizing: border-box;
+  border-top: 2rpx solid #e5e5e5;
+}
+.mask_container_msg .btn{
+  box-sizing: border-box;
+  padding: 0;
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 14px;
+  text-align: center;
+}

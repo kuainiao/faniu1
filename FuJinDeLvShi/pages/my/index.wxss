@@ -1,0 +1,17 @@
+/* pages/my/my.wxss */
+@import '../template/widget/footer.wxss';
+
+.my_name {text-align:center;font-size:14px;color:#999;padding:6px 0;line-height:22px;height:22px;}
+.my_name view{overflow: hidden;display:inline-block;}
+.my_name text{margin:0 3px;float:left;}
+.my_name text:first-child{font-weight:bold;color:#666;}
+.my_name text.vip{position: relative;left:0;top:4px;}
+.my_tips {font-size:12px;line-height:2;color: #3e3e3e;}
+.my_box {padding-bottom: 4px;border-bottom: 6px solid #0ccdcc;}
+.my_box_img {width:60px;height:60px;position:relative;}
+.my_box_img view{width:56px;height:56px;border-radius:50%;border:2px solid #0ccdcc;}
+.my_box_img text{position:absolute;width:14px;height:14px;bottom:2px;right:3px;}
+.my_items image{margin-right: 5px;vertical-align: middle;width:20px; height: 20px;}
+.my_items {margin:15px 15px 0;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;}
+.my_items .weui-cell {border-top:1px solid #d9d9d9;}
+.my_items .weui-cell::before{border:none;}

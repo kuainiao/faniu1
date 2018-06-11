@@ -1,0 +1,18 @@
+<import src="../template/block/ask.wxml" />
+<template is="ask_detail" data="{{asker:asker,detail:detail}}"></template>
+
+<!-- 回答列表 -->
+<block wx:if="{{role == 1 && detail.status<7}}">
+<view class="consult_tips p10_15">律师正在语音回复您的问题，请耐心等待3-5分钟，如果问题紧张，请拨打客服电话：<text>0531-88803703</text>，还可以添加客服微信号：<text>faniukefu</text>，为您推荐本地律师！</view>
+</block>
+<block wx:else>
+<import src="../template/block/ask.wxml"/>
+<view class="ans_list">
+    <view class="f14_clr999 bgfff p10_15 borderT mt10">{{answers.length}}人已答，听过{{detail.listen}}</view>
+    <block wx:for="{{answers}}" wx:key="id">
+    <template is="answer_list" data="{{item:item,detail:detail}}"></template>
+    </block>
+</view>
+</block>
+<!-- 客服电话 -->
+<include src="../../template/widget/footer.wxml" />

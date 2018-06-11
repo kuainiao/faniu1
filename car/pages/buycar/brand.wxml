@@ -1,0 +1,291 @@
+<!--pages/buycar/brand.wxml-->
+<scroll-view scroll-y="true" scroll-into-view="{{toView}}" style="height: 100%;">
+  <form>
+    <radio-group bindchange="brandchange">
+      <view>
+        <view class="font_14 color_6 h_88 line_h88 bg_f3f4f6 p_lr_30" id="hot">热门品牌</view>
+        <view class="hot_list clearfix p_lr_30 bg_f">
+          <view class="hot_item flex v_center h_center" bindtap='brandtap' data-brandname="1">
+            <view>
+              <image src="../../images/hot_01.jpg" class='hot_item_img'></image>
+              <radio value='1' class="brandradio"></radio>
+              <view class="font_14 color_3">别克</view>
+            </view>
+          </view>
+          <view class="hot_item flex v_center h_center" bindtap='brandtap'>
+            <view>
+              <image src="../../images/hot_02.jpg" class='hot_item_img'></image>
+              <radio value='2' class="brandradio"></radio>
+              <view class="font_14 color_3">宝马</view>
+            </view>
+          </view>
+          <view class="hot_item flex v_center h_center" bindtap='brandtap'>
+            <view>
+              <image src="../../images/hot_03.jpg" class='hot_item_img'></image>
+              <radio value='3' class="brandradio"></radio>
+              <view class="font_14 color_3">本田</view>
+            </view>
+          </view>
+          <view class="hot_item flex v_center h_center" bindtap='brandtap'>
+            <view>
+              <image src="../../images/hot_04.jpg" class='hot_item_img'></image>
+              <radio value='4' class="brandradio"></radio>
+              <view class="font_14 color_3">丰田</view>
+            </view>
+          </view>
+          <view class="hot_item flex v_center h_center" bindtap='brandtap'>
+            <view>
+              <image src="../../images/hot_05.jpg" class='hot_item_img'></image>
+              <radio value='5' class="brandradio"></radio>
+              <view class="font_14 color_3">福特</view>
+            </view>
+          </view>
+          <view class="hot_item flex v_center h_center" bindtap='brandtap'>
+            <view>
+              <image src="../../images/hot_06.jpg" class='hot_item_img'></image>
+              <radio value='6' class="brandradio"></radio>
+              <view class="font_14 color_3">MG</view>
+            </view>
+          </view>
+          <view class="hot_item flex v_center h_center" bindtap='brandtap'>
+            <view>
+              <image src="../../images/hot_07.jpg" class='hot_item_img'></image>
+              <radio value='7' class="brandradio"></radio>
+              <view class="font_14 color_3">马自达</view>
+            </view>
+          </view>
+          <view class="hot_item flex v_center h_center" bindtap='brandtap'>
+            <view>
+              <image src="../../images/hot_08.jpg" class='hot_item_img'></image>
+              <radio value='8' class="brandradio"></radio>
+              <view class="font_14 color_3">起亚</view>
+            </view>
+          </view>
+          <view class="hot_item flex v_center h_center" bindtap='brandtap'>
+            <view>
+              <image src="../../images/hot_09.jpg" class='hot_item_img'></image>
+              <radio value='9' class="brandradio"></radio>
+              <view class="font_14 color_3">日产</view>
+            </view>
+          </view>
+          <view class="hot_item flex v_center h_center" bindtap='brandtap'>
+            <view>
+              <image src="../../images/hot_10.jpg" class='hot_item_img'></image>
+              <radio value='10' class="brandradio"></radio>
+              <view class="font_14 color_3">现代</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="font_14 color_6 h_88 line_h88 bg_f3f4f6 p_lr_30" id="all">*</view>
+        <view class="list p_lr_30 bg_f">
+          <view class="item flex v_center" bindtap='brandtap'>
+            <radio value='11' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">不限品牌</view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="font_14 color_6 h_88 line_h88 bg_f3f4f6 p_lr_30" id="A">A</view>
+        <view class="list p_lr_30 bg_f">
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/A_01.jpg" class="item_img"></image>
+            <radio value='12' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">奥迪</view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="font_14 color_6 h_88 line_h88 bg_f3f4f6 p_lr_30" id="B">B</view>
+        <view class="list p_lr_30 bg_f">
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_01.jpg" class="item_img"></image>
+            <radio value='13' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">保时捷</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_02.jpg" class="item_img"></image>
+            <radio value='14' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">别克</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_03.jpg" class="item_img"></image>
+            <radio value='15' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">宝马</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_04.jpg" class="item_img"></image>
+            <radio value='16' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">宝骏</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_05.jpg" class="item_img"></image>
+            <radio value='17' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">本田</view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="font_14 color_6 h_88 line_h88 bg_f3f4f6 p_lr_30" id="C">C</view>
+        <view class="list p_lr_30 bg_f">
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_01.jpg" class="item_img"></image>
+            <radio value='13' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">保时捷</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_02.jpg" class="item_img"></image>
+            <radio value='14' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">别克</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_03.jpg" class="item_img"></image>
+            <radio value='15' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">宝马</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_04.jpg" class="item_img"></image>
+            <radio value='16' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">宝骏</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_05.jpg" class="item_img"></image>
+            <radio value='17' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">本田</view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="font_14 color_6 h_88 line_h88 bg_f3f4f6 p_lr_30" id="D">D</view>
+        <view class="list p_lr_30 bg_f">
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_01.jpg" class="item_img"></image>
+            <radio value='13' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">保时捷</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_02.jpg" class="item_img"></image>
+            <radio value='14' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">别克</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_03.jpg" class="item_img"></image>
+            <radio value='15' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">宝马</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_04.jpg" class="item_img"></image>
+            <radio value='16' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">宝骏</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_05.jpg" class="item_img"></image>
+            <radio value='17' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">本田</view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="font_14 color_6 h_88 line_h88 bg_f3f4f6 p_lr_30" id="E">E</view>
+        <view class="list p_lr_30 bg_f">
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_01.jpg" class="item_img"></image>
+            <radio value='13' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">保时捷</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_02.jpg" class="item_img"></image>
+            <radio value='14' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">别克</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_03.jpg" class="item_img"></image>
+            <radio value='15' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">宝马</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_04.jpg" class="item_img"></image>
+            <radio value='16' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">宝骏</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_05.jpg" class="item_img"></image>
+            <radio value='17' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">本田</view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="font_14 color_6 h_88 line_h88 bg_f3f4f6 p_lr_30" id="F">F</view>
+        <view class="list p_lr_30 bg_f">
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_01.jpg" class="item_img"></image>
+            <radio value='13' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">保时捷</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_02.jpg" class="item_img"></image>
+            <radio value='14' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">别克</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_03.jpg" class="item_img"></image>
+            <radio value='15' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">宝马</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_04.jpg" class="item_img"></image>
+            <radio value='16' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">宝骏</view>
+          </view>
+          <view class="item flex v_center" bindtap='brandtap'>
+            <image src="../../images/B_05.jpg" class="item_img"></image>
+            <radio value='17' class="brandradio"></radio>
+            <view class="item_name flex_1 font_14 color_3">本田</view>
+          </view>
+        </view>
+      </view>
+    </radio-group>
+  </form>
+</scroll-view>
+<view class="k_list">
+  <view class="k_item font_12 color_theme" bindtap='scrollToViewFn' wx:for="{{orientationList}}" wx:key="index" data-id="{{item.id}}" wx:if="{{item.id=='hot'}}">热</view>
+  <view class="k_item font_12 color_theme" bindtap='scrollToViewFn' wx:for="{{orientationList}}" wx:key="index" data-id="{{item.id}}" wx:if="{{item.id=='all'}}">*</view>
+  <view class="k_item font_12 color_theme" bindtap='scrollToViewFn' wx:for="{{orientationList}}" wx:key="index" data-id="{{item.id}}" wx:if="{{item.id!='hot'&&item.id!='all'}}">{{item.id}}</view>
+</view>
+<view class="mask {{brandchild}}" bindtap='masktap'></view>
+<scroll-view scroll-y="true" style="height: 100%;" class="brand_child_box {{brandchild}}">
+  <radio-group bindchange="brandtypechange" wx:if="{{brandIndex==1}}">
+    <view class="font_16 color_3 text_center h_88 line_h88">别克</view>
+    <view class="brandtype font_16 color_3 h_88 line_h88 p_lr_30" bindtap='brandtypetap'>
+      <radio value='0' class="brandradio"></radio>
+      <view>不限车系</view>
+    </view>
+    <view>
+      <view class="font_14 color_6 h_88 line_h88 bg_f3f4f6 p_lr_30">选择车系</view>
+      <view class="brand_child_list">
+        <view class="brand_child_item p_30 font_14 color_3" bindtap='brandtypetap'><radio value='1' class="brandradio"></radio><view>奥迪A4L</view></view>
+        <view class="brand_child_item p_30 font_14 color_3" bindtap='brandtypetap'><radio value='2' class="brandradio"></radio><view>奥迪Q3</view></view>
+        <view class="brand_child_item p_30 font_14 color_3" bindtap='brandtypetap'><radio value='3' class="brandradio"></radio><view>奥迪Q5</view></view>
+        <view class="brand_child_item p_30 font_14 color_3" bindtap='brandtypetap'><radio value='4' class="brandradio"></radio><view>奥迪Q7</view></view>
+      </view>
+    </view>
+  </radio-group>
+  <radio-group bindchange="brandtypechange" wx:if="{{brandIndex==2}}">
+    <view class="font_16 color_3 text_center h_88 line_h88">宝马</view>
+    <view class="brandtype font_16 color_3 h_88 line_h88 p_lr_30" bindtap='brandtypetap'>
+      <radio value='0' class="brandradio"></radio>
+      <view>不限车系</view>
+    </view>
+    <view>
+      <view class="font_14 color_6 h_88 line_h88 bg_f3f4f6 p_lr_30">选择车系</view>
+      <view class="brand_child_list">
+        <view class="brand_child_item p_30 font_14 color_3" bindtap='brandtypetap'><radio value='1' class="brandradio"></radio><view>奥迪A4L</view></view>
+        <view class="brand_child_item p_30 font_14 color_3" bindtap='brandtypetap'><radio value='2' class="brandradio"></radio><view>奥迪Q3</view></view>
+        <view class="brand_child_item p_30 font_14 color_3" bindtap='brandtypetap'><radio value='3' class="brandradio"></radio><view>奥迪Q5</view></view>
+        <view class="brand_child_item p_30 font_14 color_3" bindtap='brandtypetap'><radio value='4' class="brandradio"></radio><view>奥迪Q7</view></view>
+      </view>
+    </view>
+  </radio-group>
+</scroll-view>

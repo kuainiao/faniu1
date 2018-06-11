@@ -1,0 +1,10 @@
+/* pages/my_callconsult/my_callconsult.wxss */
+@import '../template/widget/footer.wxss';
+@import "../template/mynone/mynone.wxss";
+
+.my_call_name {font-size:14px;line-height:2;padding-top:2px;font-weight: bold;color:#f55;}
+.my_call_name text:first-child{margin-right:14px;}
+.my_call_name text:last-child{text-decoration:underline;}
+.my_call_name text:last-child.completed{text-decoration:none;color:#999;}
+.my_call_tips {font-size:12px;color:#999;}
+.my_call_tips text{color:#f55;}

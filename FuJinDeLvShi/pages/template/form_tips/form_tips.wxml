@@ -1,0 +1,21 @@
+<template name="formbox">
+
+<view class="weui-flex formitem mb10">
+    <view class="form_tt"><text style="background:url(http://static.faniuwenda.com/weapp/images/nece.png) no-repeat center center;background-size:6px auto;"></text>咨询内容</view>
+    <view class="weui-flex__item"><textarea placeholder="请详细描述你所遇到的问题（不少于10个字），以便律师能够详细了解您的问题原因，给出针对性的语音解答。" /></view>
+</view>
+
+<view class="weui-flex formitem mb10">
+    <view class="form_tt"><text style="background:url(http://static.faniuwenda.com/weapp/images/nece.png) no-repeat center center;background-size:6px auto;"></text>手机号码</view>
+    <view class="weui-flex__item"><input type="text" /></view>
+</view>
+
+<view class="weui-flex formitem mb10">
+    <view class="form_tt"><text style="background:url(http://static.faniuwenda.com/weapp/images/nece.png) no-repeat center center;background-size:6px auto;"></text>手机号码</view>
+    <view class="weui-flex__item"><input type="text" /></view>
+</view>
+
+
+
+
+</template>

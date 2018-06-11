@@ -1,0 +1,116 @@
+/* pages/lawyerDetail/lawyerDetail.wxss */
+page{
+  min-height: 100%;
+  background-color: #f4f4f4;
+}
+.container{
+  padding: 16rpx;
+}
+.header{
+  display: flex;
+  padding: 34rpx;
+  background-color: rgba(0,0,0,0.5);
+}
+.header_l{
+  width: 160rpx;
+}
+.header_r{
+  flex: 1;
+  padding-left: 28rpx;
+}
+.header_l image{
+  width: 160rpx;
+  height: 204rpx;
+  border: 2px solid #ffb512;
+  box-sizing: border-box;
+}
+.header_r .title{
+  position: relative;
+}
+.header_r .title .img{
+  width: 80rpx;
+  height: 30rpx;
+}
+.header_r .title .btn{
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 16rpx;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  z-index: 10;
+}
+.tohere{
+  padding: 0 10rpx;
+}
+.btn_box{
+  margin: 20rpx 0;
+  padding: 0 92rpx;
+  display: flex;
+}
+.btn_box .btn{
+  flex: 1;
+  font-size: 16px;
+  color: #f6f6f6;
+  text-align: center;
+  height: 58rpx;
+  line-height: 58rpx;
+}
+.btn_box .btn1{
+  margin-right: 8rpx;
+  background-color: deeppink;
+}
+.btn_box .btn2{
+  margin-left: 8rpx;
+  background-color: orange;
+}
+.btn_box .btn .img{
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.des_box{
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 20rpx;
+  margin-bottom:20rpx;
+}
+.des_box .title{
+  margin-bottom: 20rpx;
+}
+.des_box .title .cui{
+  display: inline-block;
+  vertical-align: middle;
+  width: 82rpx;
+  height: 60rpx;
+  /*margin-right: 6px;*/
+}
+.des_box .title .des{
+  display: inline-block;
+  vertical-align: middle;
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 6px;
+}
+.des_box .txt{
+  line-height: 30px;  
+}
+.status{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 30px;
+  margin-left: -70px;
+  margin-top: -15px;
+  line-height: 30px;
+  text-align: center;
+  z-index: 10;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 14px;
+}

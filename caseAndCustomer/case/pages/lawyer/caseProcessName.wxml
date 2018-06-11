@@ -1,0 +1,10 @@
+<!--pages/lawyer/caseProcessName.wxml-->
+<view class="container height_100 bg_f">
+  <form bindsubmit='nodeEdit'>
+    <view class="row mb_24">
+      <view class="key font_12">自定义进程</view>
+      <input class="value value_input" placeholder='' name="name"/>
+    </view>
+    <button class="submit" form-type='submit'>确认</button>
+  </form>
+</view>

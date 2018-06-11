@@ -1,0 +1,195 @@
+<!--pages/buycar/detail.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#4b99fd" indicator-color="#ffffff">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="p_30 mb_20 bg_f">
+  <view class="font_14 color_0 mb_10">本田锋范</view>
+  <view class="font_12 color_3 mb_10">2017款 1.5LLXI CVT舒适版</view>
+  <view class="font_12 color_9 mb_10">2016年09月 | 4.0万公里</view>
+  <view class="">
+    <text class="font_14 color_red mr_16">7.98万</text>
+    <text class="font_12 color_9">新车</text>
+    <text class="font_12 color_9 line_through">8.98</text>
+  </view>
+</view>
+<view class="mb_20">
+  <view class="tabs flex bg_f">
+    <view class="flex_1 text_center line_h40" bindtap='tabtap1'>
+      <text class="font_14 color_0 {{tabactive=='tabactive1'?'border_b_theme_2':''}}">车辆介绍</text>
+    </view>
+    <view class="flex_1 text_center line_h40" bindtap='tabtap2'>
+      <text class="font_14 color_0 {{tabactive=='tabactive2'?'border_b_theme_2':''}}">参数配置</text>
+    </view>
+  </view>
+  <view class="p_30 bg_f list {{tabactive=='tabactive1'?'show':'hide'}}">
+    <rich-text class="font_14 color_3 line_h26">
+      <p>
+          车是2011年7月上牌的，这些年带我去了不少地方，跑了6.67万公里，从没掉过链子。基本都是日常代步用的，很少出去跑高速。世嘉外形时尚大气，内饰做工精美，给人一种家的感觉，性能不错，全中文行车电脑，数字仪表一目了然，很有个性的说，科技含量也高，刹车特别好，底盘没说的，很扎实。这辆车从买来到现在一直是我自己在使用，个人一手。虽然车龄稍微有些长，但是平时对车爱护有加，并且一直停在地库，
+      </p>
+      <p>
+          <img src="../../images/icon_shop_detail.png" title="1521791766226347.gif" alt="01ce9d55e580876ac7251df84fac02.gif"/>车漆保养得很好，内饰也非常干净，性价比很高，喜欢的话就赶快联系我吧。车是2011年7月上牌的，这些年带我去了不少地方，跑了6.67万公里，从没掉过链子。基本都是日常代步用的，很少出去跑高速。世嘉外形时尚大气，内饰做工精美，给人一种家的感觉，性能不错，全中文行车电脑，数字仪表一目了然，很有个性的说，科技含量也高，刹车特别好，底盘没说的，很扎实。这辆车从买来到现在一直是我自己在使用，个人一手。虽然车龄稍微有些长，但是平时对车爱护有加，并且一直停在地库，车漆保养得很好，内饰也非常干净，性价比很高，喜欢的话就赶快联系我吧。
+      </p>
+    </rich-text>
+  </view>
+  <view class="{{tabactive=='tabactive2'?'show':'hide'}}">
+    <view>
+      <view class="height_40 line_h40 color_6 font_14 p_lr_30">车身颜色</view>
+      <view class="p_30 bg_f clearfix">
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+        <view style='background-color: #000;' class="car_color"></view>
+      </view>
+    </view>
+    <view>
+      <view class="flex height_40 line_h40 color_6 font_14 p_lr_30 h_space_between">
+        <view>基本信息</view>
+        <view class="flex height_40 line_h40 hide">
+          <view class="flex v_center mr_16">
+            <view class='quan1'></view>
+            <view>标配</view>
+          </view>
+          <view class="flex v_center">
+            <view class="quan2"></view>
+            <view>选配-无</view>
+          </view>
+        </view>
+      </view>
+      <view class="mod">
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">厂商指导价</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">7.98万</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">商家报价</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">7.38-7.98万</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">保修政策</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">3年或10万公司</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">排气量</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">1498ml 1.5L</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">进气形式</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">1498ml 1.5L</view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="flex height_40 line_h40 color_6 font_14 p_lr_30 h_space_between">
+        <view>车身尺寸</view>
+        <view class="flex height_40 line_h40 hide">
+          <view class="flex v_center mr_16">
+            <view class='quan1'></view>
+            <view>标配</view>
+          </view>
+          <view class="flex v_center">
+            <view class="quan2"></view>
+            <view>选配-无</view>
+          </view>
+        </view>
+      </view>
+      <view class="mod">
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">厂商指导价</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">7.98万</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">商家报价</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">7.38-7.98万</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">保修政策</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">3年或10万公司</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">排气量</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">1498ml 1.5L</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">进气形式</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">1498ml 1.5L</view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="flex height_40 line_h40 color_6 font_14 p_lr_30 h_space_between">
+        <view>底盘制动</view>
+        <view class="flex height_40 line_h40">
+          <view class="flex v_center mr_16">
+            <view class='quan1'></view>
+            <view>标配</view>
+          </view>
+          <view class="flex v_center">
+            <view class="quan2"></view>
+            <view>选配-无</view>
+          </view>
+        </view>
+      </view>
+      <view class="mod">
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">厂商指导价</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">7.98万</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">商家报价</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">7.38-7.98万</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">保修政策</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">3年或10万公司</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">排气量</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">1498ml 1.5L</view>
+        </view>
+        <view class="row flex bg_f">
+          <view class="flex_1 cell cell1 font_14 color_3 p_30">进气形式</view>
+          <view class="flex_1 cell cell2 font_14 color_3 p_30">1498ml 1.5L</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="btn_box_repeat"></view>
+<view class="btn_box flex v_center h_center bg_f">
+  <view class="btn_shop flex_1 text_center">
+    <image src="../../images/icon_shop_detail_on.png" class="icon"></image>
+    <image src="../../images/icon_shop_detail.png" class="icon"></image>
+    <view class="font_12 color_3">进店</view>
+  </view>
+  <view class="btn_collection flex_1 text_center">
+    <image wx:if="" src="../../images/icon_collect_detail_on.png" class="icon"></image>
+    <view wx:if="" class="font_12 color_theme">收藏</view>
+    <image wx:if="" src="../../images/icon_collect_detail.png" class="icon"></image>
+    <view wx:if="" class="font_12 color_3">收藏</view>
+  </view>
+  <view class="btn_tel flex_1 text_center">
+    <image src="../../images/icon_collect_detail_on.png" class="icon"></image>
+    <image src="../../images/icon_tel_detail.png" class="icon"></image>
+    <view class="font_12 color_3">电话</view>
+  </view>
+  <view class="btn bg_theme color_f font_14 text_center">预约询价</view>
+</view>

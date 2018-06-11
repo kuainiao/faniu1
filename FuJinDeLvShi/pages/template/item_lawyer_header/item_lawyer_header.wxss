@@ -1,0 +1,6 @@
+.item_l_tips {text-align:center;font-size:14px;color:#999;padding:6px 0;line-height:22px;height:22px;}
+.item_l_tips view{overflow: hidden;display:inline-block;}
+.item_l_tips text{margin:0 3px;float:left;}
+.item_l_tips text:first-child{font-weight:bold;color:#666;}
+.item_l_tips text.vip{position: relative;left:0;top:4px;}
+.item_lawyer_header .item_cc{font-size:12px;line-height:1.5;color: #3e3e3e;}

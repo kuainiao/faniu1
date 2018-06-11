@@ -1,0 +1,5 @@
+<!--pages/case/afterbasemsg.wxml-->
+<view class='list bg_f p_lr_36'>
+  <view class='item color_theme p_tb_36 border_b_dc' bindtap='openaboutchildren'>如何争取子女抚养权？</view>
+  <view class='item color_theme p_tb_36 border_b_dc' bindtap='openaboutwealth'>如何争取多分夫妻共有财产？</view>
+</view>

@@ -1,0 +1,63 @@
+<!--pages/lawyerDetail/lawyerDetail.wxml-->
+<view class="container">
+  <!--header开始-->
+  <view class="header">
+    <view class="header_l">
+      <image src="{{detailMsg.avatar?detailMsg.avatar : '../../img/avatar.jpg'}}"></image>
+    </view>
+    <view class="header_r">
+      <view class="title margin_b_10">
+        <text class='font_18 color_f margin_b_10 margin_r_10'>{{detailMsg.name}}</text>
+        <!--
+        <image wx:if="{{detailMsg.groupid==10}}" src="../../img/vip.png" class="img"></image>
+        <image wx:if="{{detailMsg.groupid==20}}" src="../../img/svip.png" class="img"></image>
+        <image wx:if="{{detailMsg.groupid==30}}" src="../../img/vvip.png" class="img"></image>
+        <text class="btn font_14 color_3 bg_orange {{detailMsg.isreg==1?'show':'hide'}}" bindtap='gotoClaim' data-userid="{{detailMsg.userid}}" data-status="{{detailMsg.status}}">我要认领</text>
+        -->
+      </view>
+      <view class="font_14 color_f margin_b_10">{{detailMsg.firm}}</view>
+      <view class="font_14 color_f margin_b_10" wx:if="{{!!detailMsg.no}}">执业证号：{{detailMsg.no}}</view>
+      <view class="font_14 color_f margin_b_10">{{detailMsg.address}}</view>
+      <view class="text_right">
+        <text class="tohere font_14 color_orange border_orange bg_transparent" bindtap='gotomapOfficeAddress' data-latitude="{{detailMsg.lat}}" data-longitude="{{detailMsg.lng}}" data-address="{{detailMsg.address}}">到这儿去>></text>
+      </view>
+    </view>
+  </view>
+  <!--header结束-->
+   <!--按钮开始-->
+  <view class="btn_box">
+    <view class="btn btn1" catchtap='gotopostask' data-isreg="{{detailMsg.isreg}}" data-callFee='{{detailMsg.call_fee}}' data-openid="{{detailMsgitem.userid}}"><image class="img" src="../../img/talk_w.png"></image>向他咨询</view>
+    <view class="btn btn2" catchtap='gotolawyerDetailCall' data-isreg="{{detailMsg.isreg}}" data-callFee='{{detailMsg.call_fee}}' data-openid="{{detailMsg.userid}}" data-tel="{{detailMsg.tel}}"><image class="img" src="../../img/tel_w.png"></image>电话咨询</view>
+  </view>
+   <!--按钮结束-->
+    <!--专长领域开始-->
+  <view class="des_box">
+    <view class="title"><image src="../../img/cui.png" class="cui"></image><text class="font_18">专长领域</text></view>
+    <view class="txt font_12 color_6" wx:for="{{cats}}" wx:key="id">{{item.name}}</view>
+  </view>
+   <!--专长领域结束-->
+   <!--律师介绍开始-->
+  <view class="des_box">
+    <view class="title"><image src="../../img/des.png" class="des"></image><text class="font_18">律师介绍</text></view>
+    <view class="txt font_12 color_6">{{detailMsg.intro}}</view>
+  </view>
+  <!--律师介绍结束-->
+  <!--客服热线开始-->
+  <view class="text_center color_9 font_12 margin_b_20">
+    <view>
+      <text>技术支持：法妞问答</text>
+    </view>
+    <view>
+      <text>客服热线：4006-188-116</text>
+    </view>
+  </view>
+  <view class="shareAndCustomer">
+    <view class="share">
+      <image class="share_view" src="../../img/share.png"></image>
+    </view>
+    <view class="customer">
+      <image class="customer_view" src="../../img/call.png"></image>
+    </view>
+  </view>
+  <!--客服热线结束-->
+</view>

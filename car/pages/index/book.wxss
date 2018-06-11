@@ -1,0 +1,18 @@
+/* pages/index/book.wxss */
+page{
+  background-color: #f3f4f6;
+}
+.row{
+  border-radius: 4px;
+}
+.key{
+  width: 70px;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.value{
+  height: 100rpx;
+}
+.remark{
+  width: 70px;
+}

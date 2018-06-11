@@ -1,0 +1,38 @@
+/* pages/lawyer/successCase.wxss */
+@import 'caseExamples';
+.container_success{
+  padding: 50rpx 30rpx 0;
+}
+.title_box_s{
+  box-shadow: 0 1px 1px 1px #ccc;
+}
+.title_s{
+  height: 140rpx;
+  padding-top: 40rpx; 
+  line-height: 100rpx;
+  box-sizing: border-box;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  background: url('http://static.faniuwenda.com/lawcase/sysimg/bgline_v.png') repeat-x 0 0;
+}
+.case_content {
+  box-shadow: 0 0 0;
+}
+.e_list{
+  padding: 0;
+}
+.key{
+  width: auto;
+}
+.share{
+  position: relative;
+}
+.share_btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  opacity: 0;
+}

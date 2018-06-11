@@ -1,0 +1,8 @@
+.ad_form_box{    
+   display: block;
+    width: 100%;
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-size: 100% auto;
+    padding:10px 0;}
+.ad_form_box view:last-child{text-decoration:underline;}

@@ -1,0 +1,25 @@
+<!--pages/findLawyer/findLawyer.wxml-->
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" bindcontroltap="controltap"  markers="{{markers}}"       bindmarkertap="markertap" bindcallouttap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location>
+    <!--tab切换开始-->
+    <cover-view class="tabs">
+      <cover-view class="tab tab1" bindtap='togochooseArea'>
+        <cover-image class="img" src="../../img/nav.png"></cover-image>
+        <cover-view class="txt">切换地区</cover-view>
+      </cover-view>
+      <cover-view class="tab tab2" bindtap='gotolawyerList'>
+        <cover-image class="img" src="../../img/ren.png"></cover-image>
+        <cover-view class="txt">更多律师</cover-view>
+      </cover-view>
+    </cover-view>
+    <!--tab切换结束-->
+    <!--分享和客服弹窗开始-->
+    <!--<cover-view class="shareAndCustomer">
+      <cover-view class="share" bindtap='onShareAppMessage'>
+        <cover-image class="share_view" src="../../img/share.png"></cover-image>
+      </cover-view>
+      <cover-view class="customer">
+        <cover-image class="customer_view" src="../../img/call.png"></cover-image>
+      </cover-view>
+    </cover-view>-->
+    <!--分享和客服弹窗结束-->
+  </map>

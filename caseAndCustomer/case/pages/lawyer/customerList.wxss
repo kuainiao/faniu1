@@ -1,0 +1,95 @@
+/* pages/lawyer/customerList.wxss */
+.list{
+  padding: 50rpx 30rpx 0;
+}
+.item{
+  display: flex;
+  height: 110rpx;
+  line-height: 110rpx;
+  margin-bottom: 10rpx;
+}
+.item_l{
+  flex: 1;
+  height: 110rpx;
+  margin-right: 36rpx;
+  border-radius: 10rpx;
+  padding-left: 66rpx;
+  background: #fff url('http://static.faniuwenda.com/lawcase/sysimg/bgline_b.png') repeat-y 0 0;
+}
+.item_r{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 25rpx 0;
+}
+.add{
+  margin: 100rpx auto 0;
+  width: 152rpx;
+  height: 152rpx;
+  background-color: #d2d2d2;
+}
+.add .img{
+  display: block;
+  width: 64rpx;
+  height: 64rpx;
+  margin: 44rpx;
+}
+.mask_container{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 690rpx;
+  height: 416rpx;
+  margin-top: -208rpx;
+  margin-left: -345rpx;
+  background-color: #fff;
+  z-index: 101;
+}
+.mask_container .title{
+  height: 92rpx;
+  line-height: 92rpx;
+  background-color: #343241;
+  font-size: 16px;
+  margin-bottom: 80rpx;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 2px #343241;
+}
+.mask_container .input_row{
+  display: flex;
+  height: 82rpx;
+  margin-bottom: 50rpx;
+  padding: 0 30rpx;
+}
+.mask_container input{
+  height: 82rpx;
+  border: 1px solid #dadada;
+  font-size: 14px;
+  padding-left: 10rpx;
+}
+.mask_container .name{
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+.mask_container .tel{
+  flex: 1;
+}
+.mask_container .btn_box{
+  display: flex;
+}
+.mask_container .btn{
+  width: 200rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  border-radius: 8rpx;
+  font-size: 14px;
+  padding: 0;
+}
+.mask_container .cancel{
+  border: 1px solid #343241;
+  color: #343241;
+  background-color: #fff;
+}
+.mask_container .sure{
+  background-color: #343241;
+  color: #fff;
+}

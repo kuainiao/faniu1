@@ -1,0 +1,2 @@
+/* pages/index/example.wxss */
+@import 'index.wxss';

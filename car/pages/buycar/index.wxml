@@ -1,0 +1,266 @@
+<!--pages/buycar/index.wxml-->
+<view class="top">
+  <view class="search_box bg_f border_b_e3">
+    <form>
+      <view class="search_con flex">
+        <input placeholder='品牌/车型' name="keyword" class="flex_1 search_input font_12 color_3" bindconfirm="bindconfirm"></input>
+        <image src="../../images/icon_search.png" class="icon_search"></image>
+      </view>
+    </form>
+  </view>
+  <view class="select_box border_b_e3 bg_f p_lr_30 flex v_center h_center">
+    <view class="tab1 flex_1 text_left font_14 color_3 {{tabactive=='tabactive1'?'color_theme':''}}" bindtap='tab1tap'>
+      {{newsname}}
+      <image src="../../images/icon_arrow_up.png" class='icon_arrow_down' wx:if="{{tabactive=='tabactive1'}}"></image>
+      <image src="../../images/icon_arrow_down.png" class='icon_arrow_down'wx:else></image>
+    </view>
+    <view class="flex_1 text_center font_14 color_3 {{tabactive=='tabactive2'?'color_theme':''}}" bindtap='tab2tap'>
+      <navigator url="/pages/buycar/brand">
+        品牌
+        <image src="../../images/icon_arrow_up.png" class='icon_arrow_down' wx:if="{{tabactive=='tabactive2'}}"></image>
+        <image src="../../images/icon_arrow_down.png" class='icon_arrow_down'wx:else></image>
+      </navigator>
+    </view>
+    <view class="flex_1 text_center font_14 color_3 {{tabactive=='tabactive3'?'color_theme':''}}" bindtap='tab3tap'>
+      价格
+      <image src="../../images/icon_arrow_up.png" class='icon_arrow_down' wx:if="{{tabactive=='tabactive3'}}"></image>
+      <image src="../../images/icon_arrow_down.png" class='icon_arrow_down'wx:else></image>
+    </view>
+    <view class="flex_1 text_center font_14 color_3 {{tabactive=='tabactive4'?'color_theme':''}}" bindtap='tab4tap'>
+      车型
+      <image src="../../images/icon_arrow_up.png" class='icon_arrow_down' wx:if="{{tabactive=='tabactive4'}}"></image>
+      <image src="../../images/icon_arrow_down.png" class='icon_arrow_down'wx:else></image>
+    </view>
+  </view>
+</view>
+<view class="list p_l_30 bg_f">
+  <navigator url="/pages/buycar/detail">
+    <view class="item flex border_b_e3 p_tb_20">
+      <image src="../../images/car.jpg" class="item_img"></image>
+      <view class="flex_1">
+        <view class="font_14 color_0 mb_6">本田锋范</view>
+        <view class="font_12 color_3 mb_6">2017款 1.5LLXI CVT舒适版</view>
+        <view class="font_12 color_9 mb_6">2016年09月 | 4.0万公里</view>
+        <view class="">
+          <text class="font_14 color_red mr_16">7.98万</text>
+          <text class="font_12 color_9">新车：</text>
+          <text class="font_12 color_9 line_through">8.98万</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <navigator url="/pages/buycar/detail">
+    <view class="item flex border_b_e3 p_tb_20">
+      <image src="../../images/car.jpg" class="item_img"></image>
+      <view class="flex_1">
+        <view class="font_14 color_0 mb_6">本田锋范</view>
+        <view class="font_12 color_3 mb_6">2017款 1.5LLXI CVT舒适版</view>
+        <view class="font_12 color_9 mb_6">2016年09月 | 4.0万公里</view>
+        <view class="">
+          <text class="font_14 color_red mr_16">7.98万</text>
+          <text class="font_12 color_9">新车：</text>
+          <text class="font_12 color_9 line_through">8.98万</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <navigator url="/pages/buycar/detail">
+    <view class="item flex border_b_e3 p_tb_20">
+      <image src="../../images/car.jpg" class="item_img"></image>
+      <view class="flex_1">
+        <view class="font_14 color_0 mb_6">本田锋范</view>
+        <view class="font_12 color_3 mb_6">2017款 1.5LLXI CVT舒适版</view>
+        <view class="font_12 color_9 mb_6">2016年09月 | 4.0万公里</view>
+        <view class="">
+          <text class="font_14 color_red mr_16">7.98万</text>
+          <text class="font_12 color_9">新车：</text>
+          <text class="font_12 color_9 line_through">8.98万</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <navigator url="/pages/buycar/detail">
+    <view class="item flex border_b_e3 p_tb_20">
+      <image src="../../images/car.jpg" class="item_img"></image>
+      <view class="flex_1">
+        <view class="font_14 color_0 mb_6">本田锋范</view>
+        <view class="font_12 color_3 mb_6">2017款 1.5LLXI CVT舒适版</view>
+        <view class="font_12 color_9 mb_6">2016年09月 | 4.0万公里</view>
+        <view class="">
+          <text class="font_14 color_red mr_16">7.98万</text>
+          <text class="font_12 color_9">新车：</text>
+          <text class="font_12 color_9 line_through">8.98万</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <navigator url="/pages/buycar/detail">
+    <view class="item flex border_b_e3 p_tb_20">
+      <image src="../../images/car.jpg" class="item_img"></image>
+      <view class="flex_1">
+        <view class="font_14 color_0 mb_6">本田锋范</view>
+        <view class="font_12 color_3 mb_6">2017款 1.5LLXI CVT舒适版</view>
+        <view class="font_12 color_9 mb_6">2016年09月 | 4.0万公里</view>
+        <view class="">
+          <text class="font_14 color_red mr_16">7.98万</text>
+          <text class="font_12 color_9">新车：</text>
+          <text class="font_12 color_9 line_through">8.98万</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <navigator url="/pages/buycar/detail">
+    <view class="item flex border_b_e3 p_tb_20">
+      <image src="../../images/car.jpg" class="item_img"></image>
+      <view class="flex_1">
+        <view class="font_14 color_0 mb_6">本田锋范</view>
+        <view class="font_12 color_3 mb_6">2017款 1.5LLXI CVT舒适版</view>
+        <view class="font_12 color_9 mb_6">2016年09月 | 4.0万公里</view>
+        <view class="">
+          <text class="font_14 color_red mr_16">7.98万</text>
+          <text class="font_12 color_9">新车：</text>
+          <text class="font_12 color_9 line_through">8.98万</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>
+<view class="online_consulting">
+  <image src="../../images/online_consulting.png" class="online_consulting_img"></image>
+  <button open-type="contact" class="online_consulting_btn"></button>
+</view>
+<view class="tabmask1 {{tab1}}" bindtap='tabmask1tap'></view>
+<view class="tab_list1 {{tab1}}">
+  <radio-group>
+    <view class="tab_item1 font_14 color_3" bindtap='newtap' data-news="1" data-newsname="最新上架"><radio color="#4b99fd" value="1"></radio><view>最新上架<image src="../../images/dui.png" class="tab_item1_dui"></image></view></view>
+    <view class="tab_item1 font_14 color_3" bindtap='newtap' data-news="2" data-newsname="价格最低"><radio color="#4b99fd" value="2"></radio><view>价格最低<image src="../../images/dui.png" class="tab_item1_dui"></image></view></view>
+    <view class="tab_item1 font_14 color_3" bindtap='newtap' data-news="3" data-newsname="价格最高"><radio color="#4b99fd" value="3"></radio><view>价格最高<image src="../../images/dui.png" class="tab_item1_dui"></image></view></view>
+    <view class="tab_item1 font_14 color_3" bindtap='newtap' data-news="4" data-newsname="里程最短"><radio color="#4b99fd" value="4"></radio><view>里程最短<image src="../../images/dui.png" class="tab_item1_dui"></image></view></view>
+    <view class="tab_item1 font_14 color_3" bindtap='newtap' data-news="5" data-newsname="车龄最短"><radio color="#4b99fd" value="5"></radio><view>车龄最短<image src="../../images/dui.png" class="tab_item1_dui"></image></view></view>
+  </radio-group>
+</view>
+<view class="tabmask3 {{tab3}}" bindtap='tabmask3tap'></view>
+<view class="tab_list3 {{tab3}}">
+  <view class="clearfix">
+    <radio-group>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="0" data-maxprice="0"><radio color="#4b99fd" value="1"></radio><view class="tab_item3_btn">不限</view></view>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="0" data-maxprice="5"><radio color="#4b99fd" value="2"></radio><view class="tab_item3_btn">5万以内</view></view>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="5" data-maxprice="8"><radio color="#4b99fd" value="3"></radio><view class="tab_item3_btn">5-8万</view></view>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="8" data-maxprice="10"><radio color="#4b99fd" value="4"></radio><view class="tab_item3_btn">8-10万</view></view>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="0" data-maxprice="0"><radio color="#4b99fd" value="5"></radio><view class="tab_item3_btn">10-15万</view></view>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="0" data-maxprice="0"><radio color="#4b99fd" value="6"></radio><view class="tab_item3_btn">15-20万</view></view>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="0" data-maxprice="0"><radio color="#4b99fd" value="7"></radio><view class="tab_item3_btn">20-30万</view></view>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="0" data-maxprice="0"><radio color="#4b99fd" value="8"></radio><view class="tab_item3_btn">30-50万</view></view>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="0" data-maxprice="0"><radio color="#4b99fd" value="9"></radio><view class="tab_item3_btn">50-80万</view></view>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="80" data-maxprice="100"><radio color="#4b99fd" value="10"></radio><view class="tab_item3_btn">80-100万</view></view>
+      <view class="tab_item3 font_14 color_3" bindtap='pricetap' data-minprice="100" data-maxprice="0"><radio color="#4b99fd" value="11"></radio><view class="tab_item3_btn">100万以上</view></view>
+    </radio-group>
+  </view>
+  <view class="p_15">
+    <view class="font_14 color_3 h_88 line_h88 border_t_e3 border_b_e3 mt_30">自定义价格</view>
+    <form bindsubmit='priceSure'>
+      <view class="flex mb_30 mt_30">
+        <input class="tab3_input flex_1 font_14 color_3" name="minprice"></input>
+        <view class="m_lr_15 line_h88 font_14 color_3">万-</view>
+        <input class="tab3_input flex_1 font_14 color_3" name="maxprice"></input>
+        <view class="m_lr_15 line_h88 font_14 color_3">万</view>
+        <button class="tab3_btn bg_theme color_f font_14" form-type='submit'>确定</button>
+      </view>
+    </form>
+  </view>
+</view>
+<view class="tabmask4 {{tab4}}" bindtap='tabmask4tap'></view>
+<view class="tab_list4 {{tab4}}">
+  <radio-group>
+    <view class="tab_item4" bindtap="typestap" data-types="1">
+      <radio color="#4b99fd" value="1"></radio>
+      <view class="tab_item4_btn flex v_center h_center">
+        <view>
+          <image src="../../images/car_type_01.png" class="tab_item4_img"></image>
+          <view class="tab_item4_type font_12 color_3">不限</view>
+        </view>
+      </view>
+    </view>
+    <view class="tab_item4" bindtap="typestap" data-types="1">
+      <radio color="#4b99fd" value="2"></radio>
+      <view class="tab_item4_btn flex v_center h_center">
+        <view>
+          <image src="../../images/car_type_02.png" class="tab_item4_img"></image>
+          <view class="tab_item4_type font_12 color_3">微小型车</view>
+        </view>
+      </view>
+    </view>
+    <view class="tab_item4" bindtap="typestap" data-types="1">
+      <radio color="#4b99fd" value="3"></radio>
+      <view class="tab_item4_btn flex v_center h_center">
+        <view>
+          <image src="../../images/car_type_03.png" class="tab_item4_img"></image>
+          <view class="tab_item4_type font_12 color_3">紧凑型车</view>
+        </view>
+      </view>
+    </view>
+    <view class="tab_item4" bindtap="typestap" data-types="1">
+      <radio color="#4b99fd" value="4"></radio>
+      <view class="tab_item4_btn flex v_center h_center">
+        <view>
+          <image src="../../images/car_type_04.png" class="tab_item4_img"></image>
+          <view class="tab_item4_type font_12 color_3">中型车</view>
+        </view>
+      </view>
+    </view>
+    <view class="tab_item4" bindtap="typestap" data-types="1">
+      <radio color="#4b99fd" value="5"></radio>
+      <view class="tab_item4_btn flex v_center h_center">
+        <view>
+          <image src="../../images/car_type_05.png" class="tab_item4_img"></image>
+          <view class="tab_item4_type font_12 color_3">中大型车</view>
+        </view>
+      </view>
+    </view>
+    <view class="tab_item4" bindtap="typestap" data-types="1">
+      <radio color="#4b99fd" value="5"></radio>
+      <view class="tab_item4_btn flex v_center h_center">
+        <view>
+          <image src="../../images/car_type_06.png" class="tab_item4_img"></image>
+          <view class="tab_item4_type font_12 color_3">SUV</view>
+        </view>
+      </view>
+    </view>
+    <view class="tab_item4" bindtap="typestap" data-types="1">
+      <radio color="#4b99fd" value="7"></radio>
+      <view class="tab_item4_btn flex v_center h_center">
+        <view>
+          <image src="../../images/car_type_07.png" class="tab_item4_img"></image>
+          <view class="tab_item4_type font_12 color_3">MPV</view>
+        </view>
+      </view>
+    </view>
+    <view class="tab_item4" bindtap="typestap" data-types="1">
+      <radio color="#4b99fd" value="8"></radio>
+      <view class="tab_item4_btn flex v_center h_center">
+        <view>
+          <image src="../../images/car_type_08.png" class="tab_item4_img"></image>
+          <view class="tab_item4_type font_12 color_3">跑车</view>
+        </view>
+      </view>
+    </view>
+    <view class="tab_item4" bindtap="typestap" data-types="1">
+      <radio color="#4b99fd" value="9"></radio>
+      <view class="tab_item4_btn flex v_center h_center">
+        <view>
+          <image src="../../images/car_type_09.png" class="tab_item4_img"></image>
+          <view class="tab_item4_type font_12 color_3">皮卡</view>
+        </view>
+      </view>
+    </view>
+    <view class="tab_item4" bindtap="typestap" data-types="1">
+      <radio color="#4b99fd" value="10"></radio>
+      <view class="tab_item4_btn flex v_center h_center">
+        <view>
+          <image src="../../images/car_type_10.png" class="tab_item4_img"></image>
+          <view class="tab_item4_type font_12 color_3">微面</view>
+        </view>
+      </view>
+    </view>
+  </radio-group>
+</view>

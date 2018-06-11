@@ -1,0 +1,115 @@
+<!--pages/lawyer/caseDetail.wxml-->
+<view class="title">{{detailMsg.title}}</view>
+<view class="case_content">
+  <view class="row flex font_12 color_9">
+    <view class="key"><image src="../../images/time.png" class="time_icon"></image>创建时间：</view>
+    <view class="value">{{detailMsg.addtime}}</view>
+  </view>
+  <view class="row flex font_14">
+    <view class="key"><image src="../../images/casetype_icon.png" class="casetype_icon"></image>案件类型：</view>
+    <view class="value">{{detailMsg.catname}}</view>
+  </view>
+  <view class="row flex font_14">
+    <view class="key"><image src="../../images/customer_icon.png" class="customer_icon"></image>当事人：</view>
+    <view class="value flex_1">
+      <view wx:for="{{litigants}}" wx:key="id">{{item.name}} {{item.mobile}}</view>
+      <view wx:if="{{litigants.length==0}}">暂无</view>
+    </view>
+  </view>
+  <view class="row flex font_14">
+    <view class="key"><image src="../../images/remark_icon.png" class="remark_icon"></image>备注信息：</view>
+    <view class="value flex_1">{{detailMsg.content?detailMsg.content:'暂无信息'}}</view>
+  </view>
+  <view class="set_list" wx:if="{{detailMsg.status==1||detailMsg.status==7||detailMsg.status==8}}">
+    <view class="set_item edit">
+      <image src="../../images/editor_icon.png" bindtap='gotoNewCase'></image>
+      <view class="font_12">编辑</view>
+    </view>
+    <view class="set_item delete" wx:if="{{detailMsg.msgcount==0}}" bindtap='lawcaseDel'>
+      <image src="../../images/delete_icon.png"></image>
+      <view class="font_12">删除</view>
+    </view>
+  </view>
+</view>
+<view>
+  <view class="e_list">
+    <view class="e_c" wx:for="{{lawcaseMixMsgArray}}" wx:key="info_id">
+      <view class="e_item flex" wx:if="{{item.type==1&&item.islawyer==1}}">
+        <image class="head head_lawyer" src="{{item.avatar}}"></image>
+        <view class="flex_1">
+          <view class="font_12 color_9 mb_14">{{item.addtime}}</view>
+          <view wx:for="{{item.content}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="itemName" wx:if="{{item.msgtype==2}}" catchtap='previewImg' data-url="{{itemName}}">
+            <image src="{{itemName}}" class="file_img"></image>
+          </view>
+          <view class="font_14" wx:if="{{item.msgtype==1}}">{{item.content}}</view>
+        </view>
+      </view>
+      <view class="e_item flex" wx:elif="{{item.type==1&&item.islawyer==0}}">
+        <view class="flex_1 text_right">
+          <view class="font_12 color_9 mb_14 text_right">{{item.addtime}}</view>
+          <view wx:for="{{item.content}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="itemName" wx:if="{{item.msgtype==2}}" catchtap='previewImg' data-url="{{itemName}}">
+            <image src="{{itemName}}" class="file_img"></image>
+          </view>
+          <view class="font_14" wx:if="{{item.msgtype==1}}">{{item.content}}</view>
+        </view>
+        <image class="head head_customer" src="{{item.avatar}}"></image>
+      </view>
+      <view class="e_item" wx:elif="{{item.type==2}}">
+        <view class='mb_14'>
+          <text class='status bg_f39b07 color_f font_13'>{{item.title}}</text>
+        </view>
+        <view class='font_12 color_9 mb_14'>{{item.addtime}}</view>
+        <view class="font_13">{{item.content}}</view>
+        <view class="set_list" wx:if="{{detailMsg.status==1||detailMsg.status==7||detailMsg.status==8}}">
+          <view class="set_item edit" bindtap='gotoCaseProcess' data-id="{{item.info_id}}">
+            <image src="../../images/editor_icon.png"></image>
+            <view class="font_12">编辑</view>
+          </view>
+          <view class="set_item delete" bindtap='lawcaseEventDel' data-id="{{item.info_id}}">
+            <image src="../../images/delete_icon.png"></image>
+            <view class="font_12">删除</view>
+          </view>
+        </view>
+      </view>
+      <view class="e_item flex" wx:elif="{{item.type==3}}">
+        <image class="head head_lawyer" src="{{item.avatar}}"></image>
+        <view class="flex_1">
+          <view class="font_12 color_9 mb_24">{{item.addtime}}</view>
+          <view class="font_14">{{item.content}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<form class="" bindsubmit='send' report-submit="true">
+  <view class="send_box flex" wx:if="{{detailMsg.status==1||detailMsg.status==7||detailMsg.status==8}}">
+    <textarea class="send_text flex_1" placeholder='' auto-height='true' placeholder-class='send_text_p' name="content" value="{{textareaValue}}"></textarea>
+    <button class="send_btn" formType='submit'>发送</button>
+  </view>
+</form>
+<view class='list clearfix'>
+  <view class="item" bindtap='uploadimg' wx:if="{{detailMsg.status==1||detailMsg.status==7||detailMsg.status==8}}">
+    <image src="../../images/updataimg.png" ></image>
+    <view class="font_14 text_center">上传图片</view>
+  </view>
+  <view class="item" bindtap='gotoCaseProcess' wx:if="{{detailMsg.status==1||detailMsg.status==7||detailMsg.status==8}}">
+    <image src="../../images/caseprocess.png"></image>
+    <view class="font_14 text_center">案件进程</view>
+  </view>
+  <view class="item" bindtap='gotoChooseCustomer' wx:if="{{detailMsg.status==1}}">
+    <image src="../../images/invitecustomer.png"></image>
+    <view class="font_14 text_center">邀请当事人</view>
+  </view>
+  <view class="item" bindtap='gotoDeleteCustomer' wx:if="{{detailMsg.status==1}}">
+    <image src="../../images/deletecustomer.png"></image>
+    <view class="font_14 text_center">删除当事人</view>
+  </view>
+  <view class="item" bindtap='endCase' wx:if="{{detailMsg.status==1}}">
+    <image src="../../images/endcase.png"></image>
+    <view class="font_14 text_center">结案</view>
+  </view>
+  <view class="item" bindtap='gotoCaseExamples' wx:if="{{detailMsg.status==7}}">
+    <image src="../../images/endcase.png"></image>
+    <view class="font_14 text_center">确认结案</view>
+  </view>
+</view>

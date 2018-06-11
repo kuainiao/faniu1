@@ -1,0 +1,21 @@
+<view wx:if="{{false}}">
+  <view class='mt10 bgfff p10 p_30' wx:for="{{newsItems}}" wx:key="index">
+    <view class='tac news_tt'>{{item.name}}</view>
+    <view class='news_cc'>{{item.cc}}</view>
+    <view class='flex news_imgs' wx:if="{{item.isimgs}}">
+        <view style='background:url(/images/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+        <view style='background:url(/images/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+        <view style='background:url(/images/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+        <view style='background:url(/images/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+        <view style='background:url(/images/banner.png) no-repeat center center;background-size:cover;' class='img'></view>
+    </view>
+    <view class='news_v mb10' wx:else><video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video></view>
+    <view class='flex news_fn'>
+        <view class="flex on"><image src='/images/icon_zan_on.png' mode='widthFix'></image><text>{{item.numzan}}</text></view>
+        <view class="flex flexitem on"><image src='/images/icon_collection_on.png' mode='widthFix'></image><text>{{item.numcol}}</text></view>
+        <view class='btn_del' bindtap='newsDel' data-index='{{index}}'>删除</view>
+    </view>
+  </view>
+</view>
+<view class='btnbox tac bg_theme' bindtap='newscreate'><view>发布资讯</view></view>
+<view class="nodata font_14 color_6" wx:if="{{true}}">暂无资讯</view>

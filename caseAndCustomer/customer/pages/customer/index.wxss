@@ -1,0 +1,101 @@
+/* pages/customer/customer.wxss */
+page{
+  height: 100%;
+}
+.container,.view{
+  height: 100%;
+  background: url('http://static.faniuwenda.com/lawcase/sysimg/custom-bg.png') no-repeat 0 bottom;
+  background-size: 100% 100%;
+}
+.banner_img{
+  width: 100%;
+  height: 354rpx;
+}
+.list{
+  margin-top: 68rpx;
+}
+.item{
+  width: 586rpx;
+  height: 168rpx;
+  line-height: 168rpx;
+  text-align: center;
+  background-color: #f39b07;
+  margin: 0 auto;
+  border-radius: 10rpx;
+}
+.item1{
+  margin-bottom: 24rpx;
+}
+.item .item_img{
+  vertical-align: middle;
+}
+.item1 .item_img{
+  width: 81rpx;
+  height: 64rpx;
+}
+.item2 .item_img{
+  width: 75rpx;
+  height: 86rpx;
+}
+.mask_test{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -345rpx;
+  margin-top: -345rpx;
+  width: 690rpx;
+  height: 550rpx;
+  background-color: #fff;
+  padding: 46rpx;
+  box-sizing: border-box;
+  z-index: 101;
+}
+.mask_test .row{
+  height: 100rpx;
+  position: relative;
+}
+.mask_test input{
+  height: 100rpx;
+  padding-left: 95rpx;
+  border: 1px solid #343241;
+}
+.tel_img{
+  position: absolute;
+  top: 50%;
+  left: 30rpx;
+  margin-top: -21rpx;
+  width: 30rpx;
+  height: 42rpx;
+}
+.code_img{
+  position: absolute;
+  top: 50%;
+  left: 30rpx;
+  margin-top: -24rpx;
+  width: 32rpx;
+  height: 48rpx;
+}
+.btn_test{
+  width: 450rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.mask_testfail{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -80rpx;
+  margin-left: -175rpx;
+  width: 350rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  background-color: #fff;
+  z-index: 102;
+  border-radius: 8px;
+}
+.icon_fail{
+  display: inline-block;
+  vertical-align: middle;
+  width: 77rpx;
+  height: 77rpx;
+}

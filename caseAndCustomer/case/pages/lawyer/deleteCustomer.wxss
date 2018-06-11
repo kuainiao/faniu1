@@ -1,0 +1,2 @@
+/* pages/lawyer/deleteCustomer.wxss */
+@import 'chooseCustomer.wxss';

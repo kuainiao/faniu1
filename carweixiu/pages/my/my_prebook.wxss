@@ -1,0 +1,12 @@
+.myprebookitem{font-size:0.75rem;line-height:1.2rem;color:#353535;}
+.myprebookitem .clr{color:#ff9b26;}
+.myprebookitem .btn{width:6em;border-radius:0.2rem;color:#fff;text-align:center;line-height:1.5rem;margin-top:0.3rem;}
+.myprebookitem .btn.btn01{background:#f9295d;}
+.myprebookitem .btn.btn02{background:#b2b2b2;}
+.flex {display: -webkit-box;display: -webkit-flex;display: flex;}
+.bgfff{background:#fff;}
+.p10{padding:0.625rem;}
+.oh{overflow: hidden;}
+.mt10{margin-top:0.625rem;}
+.fr{float:right;}
+.flexitem {-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}

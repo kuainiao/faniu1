@@ -1,0 +1,14 @@
+@import "../template/onlinebtn/onlinebtn.wxss";
+
+page{background:#f3f4f6;}
+.showinfo_t{padding-top:1.5rem;font-size:0.875rem;}
+.showinfo_t .img{width:4.1rem;height:4.1rem;border-radius:50%;margin:0 auto 0.625rem;}
+.showinfo_items{padding:0.75rem 0;font-size:0.75rem;flex-wrap:wrap;justify-content:center;line-height:1.5rem;}
+.showinfo_items .item{width:5em;border:1px solid #4b99fd;color:#888;border-radius:0.3rem;margin:0.2rem;}
+.showinfo_items .item.on{border:1px solid #4b99fd;color:#4b99fd;}
+.showinfo_itemscc{padding:0 0.625rem 0.625rem;text-align:justify;font-size:0.875rem;line-height:1.2rem;color:#353535;}
+.showinfo_itemscc image{margin:0.3rem 0;}
+.tac{text-align:center;}
+.imgbox image{display: block;width:100%;}
+.flex {display: -webkit-box;display: -webkit-flex;display: flex;}
+.flexitem {-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}

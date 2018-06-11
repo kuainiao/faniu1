@@ -1,0 +1,2 @@
+/* pages/lawyer/shareCase.wxss */
+@import 'caseDetail.wxss';

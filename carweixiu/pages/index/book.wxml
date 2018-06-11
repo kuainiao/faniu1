@@ -1,0 +1,68 @@
+<!--pages/index/book.wxml-->
+<view class="p_t_30">
+  <view class="tabs flex v_center h_center height_40 line_h40 bg_f mb_20">
+    <view class="tab flex_1 text_center" bindtap='tabtap1'>
+      <text class="font_14 color_3 height_40 line_h40 {{tab==1?'active':''}}">预约到店</text>
+    </view>
+    <view class='tab flex_1 text_center' bindtap='tabtap2'>
+      <text class="font_14 color_3 height_40 line_h40 {{tab==2?'active':''}}">预约上门</text>
+    </view>
+  </view>
+  <form bindsubmit="formsubmit1" class="{{tab==1?'show':'hide'}}">
+    <view class="row flex bg_f height_40 line_h40 v_center p_lr_30 arrow mb_20">
+      <view class="font_14 color_3">预约日期</view>
+      <picker mode="date" value="{{date1}}" bindchange="bindDateChange1" name="date" class="flex_1 text_right mr_30 font_14 color_3 height_40">
+        <view class="picker color_80">{{date1}}</view>
+      </picker>
+    </view>
+    <view class="row flex bg_f height_40 line_h40 v_center p_lr_30 arrow mb_20">
+      <view class="font_14 color_3">预约时间</view>
+      <picker mode="time" value="{{time1}}" bindchange="bindTimeChange1" name="time" class="flex_1 text_right mr_30 font_14 color_3 height_40">
+        <view class="picker color_80">{{time1}}</view>
+      </picker>
+    </view>
+    <view class="row flex bg_f height_40 line_h40 v_center p_lr_30 arrow mb_20">
+      <view class="font_14 color_3">联系方式</view>
+      <input class="flex_1 text_right mr_30 font_14 color_3 height_40" type='number' maxlength='11' placeholder='请输入联系方式' name="tel"></input>
+    </view>
+    <view class="flex bg_f p_lr_30 v_center">
+      <view class="font_14 color_3">备注</view>
+      <textarea class="flex_1 font_14 color_3" placeholder='请输入您预约的项目、到店人数等要求...' name="mark"></textarea>
+    </view>
+    <button class="bg_theme color_f w_80 m_t_100" form-type='submit'>预约</button>
+  </form>
+  <form bindsubmit="formsubmit2" class="{{tab==2?'show':'hide'}}">
+    <view class="row flex bg_f height_40 line_h40 v_center p_lr_30 arrow mb_20">
+      <view class="font_14 color_3">上门日期</view>
+      <picker mode="date" value="{{date2}}" bindchange="bindDateChange2" name="date" class="flex_1 text_right mr_30 font_14 color_3 height_40">
+        <view class="picker color_80">{{date2}}</view>
+      </picker>
+    </view>
+    <view class="row flex bg_f height_40 line_h40 v_center p_lr_30 arrow mb_20">
+      <view class="font_14 color_3">上门时间</view>
+      <picker mode="time" value="{{time2}}" bindchange="bindTimeChange2" name="time" class="flex_1 text_right mr_30 font_14 color_3 height_40">
+        <view class="picker color_80">{{time2}}</view>
+      </picker>
+    </view>
+    <view class="row flex bg_f height_40 line_h40 v_center p_lr_30 arrow mb_20">
+      <view class="font_14 color_3">联系方式</view>
+      <input class="flex_1 text_right mr_30 font_14 color_3 height_40" type='number' maxlength='11' placeholder='请输入联系方式' name="tel"></input>
+    </view>
+    <view class="row flex bg_f height_40 line_h40 v_center p_lr_30 arrow mb_20">
+      <view class="font_14 color_3">地区选择</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" name="region" custom-item="{{customItem}}" class="flex_1 text_right mr_30 font_14 color_3 height_40">
+        <view class="picker color_80 {{region.length==0?'show':'hide'}}">请选择地区</view>
+         <view class="picker color_3 {{region.length>0?'show':'hide'}}">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+      </picker>
+    </view>
+    <view class="row flex bg_f height_40 line_h40 v_center p_lr_30 arrow mb_20">
+      <view class="font_14 color_3">详细地址</view>
+      <input class="flex_1 text_right mr_30 font_14 color_3 height_40" placeholder='请输入详细地址' name="address"></input>
+    </view>
+    <view class="flex bg_f p_lr_30 v_center">
+      <view class="font_14 color_3">备注</view>
+      <textarea class="flex_1 font_14 color_3" placeholder='请输入您预约的项目、到店人数等要求...' name="mark"></textarea>
+    </view>
+    <button class="bg_theme color_f w_80 m_t_100" form-type='submit'>预约</button>
+  </form>
+</view>

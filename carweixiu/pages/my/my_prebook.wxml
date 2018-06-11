@@ -1,0 +1,19 @@
+<view class="myprebookitem bgfff p10 mt10 oh">
+    <view class='flex'><view class='flexitem font_14'>预约时间：yyyymmdd hhmm</view><view class='clr font_14 color_theme'>预约中</view></view>
+    <view class="font_14 color_3">联系方式：xxxxxxx</view>
+    <view class="font_14 color_3">备注：xxxxxx</view>
+    <view class='fr btn btn01 font_14 bg_theme' bindtap='preconcel'>取消预约</view>
+</view>
+<view class="myprebookitem bgfff p10 mt10 oh">
+    <view class='flex'><view class='flexitem font_14'>预约时间：yyyymmdd hhmm</view><view class='clr font_14 color_theme'>已取消</view></view>
+    <view class="font_14 color_3">联系方式：xxxxxxx</view>
+    <view class="font_14 color_3">备注：xxxxxx</view>
+    <view class="font_14 color_3">取消原因：买家取消/店家取消（取消原因）</view>
+    <view class='fr btn btn02 font_14 ' bindtap='predel'>删除</view>
+</view>
+<view class="myprebookitem bgfff p10 mt10 oh">
+    <view class='flex'><view class='flexitem font_14'>预约时间：yyyymmdd hhmm</view><view class='clr font_14 color_theme'>完成</view></view>
+    <view class="font_14 color_3">联系方式：xxxxxxx</view>
+    <view class="font_14 color_3">备注：xxxxxx</view>
+    <view class='fr btn btn02 font_14 ' bindtap='predel'>删除</view>
+</view>

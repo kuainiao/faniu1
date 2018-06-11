@@ -1,0 +1,6 @@
+.shopitems{justify-content: space-between;padding:0 7%;flex-wrap:wrap;}
+.shopitems .shopitem{width:46%;font-size:14px;line-height:1.2rem;padding-bottom:0.3rem;}
+.shopitems .shopitem .img{margin-bottom:0.3rem;height: 5.3rem;}
+.shopitems .shopitem .name{color:#353535;max-height:2.4rem;overflow: hidden;}
+.shopitems .shopitem .price{color:#f9295d;font-size:14px;line-height:1.5rem;}
+.shopitems .shopitem .price .fr{color:#ff9b26;}

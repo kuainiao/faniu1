@@ -1,0 +1,32 @@
+<template name="lawyer_header">
+  <view class="bgfff p10_15 borderTB item_lawyer_header">
+    <navigator url="{{expert.homepage}}" class="item_img mauto">
+      <view style="background:url({{expert.avatar}}) no-repeat center center;background-size:cover;"></view>
+      <text hidden="{{expert.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+    </navigator>
+    <view class="item_l_tips">
+      <view>
+        <text>{{expert.name}}律师</text>
+        <text hidden="{{expert.groupid<10}}" class="vip" style="background:url({{expert.vipIcon}}) no-repeat center center;background-size:contain;"></text>
+        <text>{{expert.area}}</text>
+      </view>
+    </view>
+    <view class="item_cc">{{expert.firm}}　执业证号：{{expert.no}}</view>
+    <view class="weui-flex item_cc">
+      <view class="weui-flex__item">帮助人数：
+        <text class="fontClrf55">{{expert.answer}}人</text>
+      </view>
+      <view class="weui-flex__item">关注人数：
+        <text class="fontClr0dc">{{expert.follow}}人</text>
+      </view>
+    </view>
+    <view class="weui-flex item_cc">
+      <view wx:if="{{expert.consulting_fee>0}}" class="weui-flex__item">付费咨询：
+        <text class="fontClr0dc">{{expert.consulting_fee}}元/次</text>
+      </view>
+      <view wx:if="{{expert.call_fee>0}}" class="weui-flex__item">电话咨询：
+        <text class="fontClr0dc">{{expert.call_fee}}元/次</text>
+      </view>
+    </view>
+  </view>
+</template>

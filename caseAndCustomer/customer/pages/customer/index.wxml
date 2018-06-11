@@ -1,0 +1,36 @@
+<!--pages/customer/customer.wxml-->
+<view class="view">
+  <image src="../../images/customer_banner.jpg" class="banner_img"></image>
+  <view class="list">
+    <view class="item item1 color_f font_16 mb_24" bindtap='gotoCaseList'>
+      <image src="../../images/case_icon.png" class="item_img"></image>
+      我的案件
+    </view>
+    <view class="item item2 color_f font_16" bindtap='gotoLawyerList'>
+      <image src="../../images/lawyer_icon.png" class="item_img"></image>
+      我的律师
+    </view>
+  </view>
+</view>
+<view class="mask {{maskC?'show':'hide'}}" bindtap='hideMaskC'></view>
+<view class="mask_test {{maskC?'show':'hide'}}">
+  <view class='font_18 color_0 text_center mb_20 bold'>验证信息</view>
+  <form bindsubmit="bindUser">
+    <view class="row mb_20">
+      <image src="../../images/tel.png" class="tel_img"></image>
+      <input placeholder='请输入您的手机号进行验证' name="mobile" class='font_14' maxlength='11'></input>
+    </view>
+    <view class="row mb_20">
+      <image src="../../images/code.png" class="code_img"></image>
+      <input placeholder='请输入您的邀请码' name="code" class='font_14' maxlength='6'></input>
+    </view>
+    <view class='mt_40'>
+      <button class="btn_test bg_343241 color_f" formType="submit">验证</button>
+    </view>
+  </form>
+</view>
+<view class="mask {{testfail?'show':'hide'}}"></view>
+<view class="mask_testfail color_e6090e text_center font_18 {{testfail?'show':'hide'}}">
+  <image src='../../images/fail.png' class="icon_fail"></image>
+  验证失败
+</view>

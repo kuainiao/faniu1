@@ -1,0 +1,7 @@
+<template name="shopitem">
+  <navigator url="{{url}}" class='shopitem'>
+    <view style='background:url({{img}}) no-repeat center center;background-size:cover;height:{{imgheight}}px;' class='img'></view>
+    <view class='name'>{{name}}</view>
+    <view class='price'>¥{{price}}</view>
+  </navigator>
+</template>

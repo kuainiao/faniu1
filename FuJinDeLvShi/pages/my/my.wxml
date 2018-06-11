@@ -1,0 +1,61 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+<!--头部开始-->
+  <view class="header">
+    <view class="header_l">
+      <image src="{{headimgurl}}" class="img"></image>
+    </view>
+    <view class="header_r color_f">{{nickname}}</view>
+  </view>
+  <!--头部结束-->
+  <view class="consulting font_16 color_3 bold" bindtap='gotoask'>
+    <image src="http://static.faniuwenda.com/weapp/images/icon_question.png"></image>
+    我的咨询
+  </view>
+  <!--
+  <view class="consulting font_16 color_3 bold" bindtap='gotoanother'>
+    <image src="http://static.faniuwenda.com/weapp/images/icon_question.png"></image>
+    我的一对一咨询
+  </view>
+  <view class="consulting font_16 color_3 bold" bindtap='gotocall'>
+    <image src="http://static.faniuwenda.com/weapp/images/icon_question.png"></image>
+    我的电话咨询
+  </view>
+  -->
+  <!--body开始-->
+  <view class="apply_box">
+    <view class="apply_img">
+      <image class="img" src="../../img/joinlawyer.png"></image>
+    </view>
+    <view class="apply_btn" bindtap='gotoClaim'>我是律师，申请入驻</view>
+  </view>
+  <view class="text_center color_9 font_12 margin_b_20">
+    <view>
+      <text>技术支持：法妞问答</text>
+    </view>
+    <view>
+      <text>客服热线：4006-188-116</text>
+    </view>
+  </view>
+  <!--body结束-->
+  <!--弹窗开始-->
+  <view class="mask {{maskShow}}">
+    <view class="mask_container">
+      <view class="close" bindtap="closeMask">X</view>
+      <view>
+        <image class="img"></image>
+      </view>
+      <view class="form_box">
+        <view class="row"><input type="text" placeholder='请输入您的名字'/></view>
+        <view class="row"><input type="number" placeholder='请输入您的联系电话'/></view>
+        <view class="row">
+          <view class="btn">立即申请</view>
+        </view>
+      </view>
+      <view class="tip color_red font_12 margin_b_20">*提交申请后,我们的客服人员会及时与您取得联系,请耐心等待。</view>
+      <view class="text_center color_3 font_14">您还可以拨打我们的客服热线</view>
+      <view class="text_center color_3 font_14">0531-88803703</view>
+    </view>
+  </view>
+  <!--弹窗结束-->
+</view>

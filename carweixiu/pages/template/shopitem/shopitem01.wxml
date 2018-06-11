@@ -1,0 +1,7 @@
+<template name="service">
+  <navigator url="{{url}}" class='shopitem'>
+    <view style='background:url({{img}}) no-repeat center center;background-size:cover;' class='img'></view>
+    <view class='name font_14'>{{name}}</view>
+    <view class='oh price'><view class='fl font_14'>¥{{price}}</view><view class='fr font_14'>会员价:¥{{memberprice}}</view></view>
+  </navigator>
+</template>

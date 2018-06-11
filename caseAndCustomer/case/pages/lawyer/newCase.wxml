@@ -1,0 +1,50 @@
+<!--pages/lawyer/newCase.wxml-->
+<view class="container height_100 bg_f">
+  <form bindsubmit="gotoCaseList">
+    <view class="row mb_24">
+      <view class="key font_12">案件名称</view>
+      <input class="value value_input font_12" placeholder='某某某' name="title" bindinput="bindTitleBlur" value="{{title}}"/>
+    </view>
+    <view class="row mb_24">
+      <view class="key font_12">案件类型</view>
+      <picker class="value value_picker font_12" name="catid" bindchange='bindPickerChange' value="{{index}}" range='{{categoryArray}}' range-key='name'>{{index==null?'请选择案件类型':categoryArray[index].name}}</picker>
+      <view class="value value_subpicker font_12 color_f39b07" bindtap='gotoNewCaseType'>创建类型</view>
+    </view>
+    <view class="row mb_24">
+      <view class="key font_12">添加当事人</view>
+      <view class="list value clearfix">
+        <checkbox-group name="uids">
+          <view class="item" wx:for="{{litigants}}" wx:key="id" wx:if="{{item.selected==1}}">
+            <view class="item_text font_12">{{item.name}}</view>
+            <image src="../../images/close.png" class="close_icon" bindtap='delLitigants' data-id="{{item.id}}"></image>
+            <checkbox checked='true' class="item_checkbox" value="{{item.id}}"></checkbox>
+          </view>
+        </checkbox-group>
+        
+        <view class="item item_add" bindtap='gotoChooseCustomer'>
+          <image class="add_icon" src="../../images/add.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="row mb_24">
+      <view class="key font_12">备注</view>
+      <textarea class="value_textarea font_12" name="content" bindinput="bindContentBlur" value="{{content}}"></textarea>
+    </view>
+    <button class="submit" formType="submit" wx:if="{{id?false:true}}">创建案件</button>
+    <button class="submit" formType="submit" wx:if="{{id?true:false}}">修改案件</button>
+  </form>
+</view>
+<!--<view class="nav_list">
+  <view class="nav_item active" bindtap='gotoNewCase'>
+    <image src="" class="nav_icon"></image>
+    <view class="nav_text">创建新案件</view>
+  </view>
+  <view class="nav_item" bindtap='gotoCaseList'>
+    <image src="" class="nav_icon"></image>
+    <view class="nav_text">我的案件</view>
+  </view>
+  <view class="nav_item" bindtap='gotoCustomerList'>
+    <image src="" class="nav_icon"></image>
+    <view class="nav_text">我的当事人</view>
+  </view>
+</view>-->

@@ -1,0 +1,134 @@
+/* pages/lawyer/caseDetail.wxss */
+page{
+  background-color: #fff;
+}
+.title{
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+.case_content{
+  padding: 60rpx 30rpx;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 6px 6px #f6f6f6;
+}
+.key{
+  width: 100px;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.time_icon{
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-right: 16rpx;
+}
+.casetype_icon,.customer_icon,.remark_icon{
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.value{
+  min-height: 80rpx;
+  line-height: 80rpx;
+  flex-wrap: wrap-reverse;
+}
+.set_list{
+  display: flex;
+  position: absolute;
+  top: 50rpx;
+  right: 30rpx;
+  z-index: 101;
+}
+.set_item{
+  margin-left: 30rpx;
+  text-align: center;
+}
+.set_item image{
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.e_list{
+  padding: 30rpx;
+  margin: 30rpx 0 60rpx;
+}
+.e_item{
+  min-height: 220rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background-color: #ecebeb;
+  margin-bottom: 10rpx;
+  position: relative
+}
+.status{
+  margin-left: -30rpx;
+  padding: 4rpx 30rpx;
+}
+.e_item .set_list{
+  top:30rpx;
+}
+.head{
+  width: 90rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.head_lawyer{
+  margin-right: 20rpx;
+}
+.head_customer{
+  margin-left: 20rpx;
+}
+.file_img{
+  width: 68rpx;
+  height: 90rpx;
+}
+.send_box{
+  margin-top: 180rpx;
+  padding: 0 30rpx;
+}
+.send_text{
+  min-height: 40px;
+  padding: 10px;
+  margin-right: 24rpx;
+  border: 1px solid #c9c9c9;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.send_text_p{
+  font-size: 14px;
+  color: #343241;
+  text-align: center;
+  line-height: 100rpx;
+}
+.send_btn{
+  width: 138rpx;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  font-size: 14px;
+  background-color: #343241;
+  color: #fff;
+}
+.list{
+  padding: 30rpx;
+}
+.item{
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+}
+.item image{
+  width: 110rpx;
+  height: 110rpx;
+  margin: 0 auto 12rpx auto;
+}

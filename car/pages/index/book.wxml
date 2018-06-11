@@ -1,0 +1,18 @@
+<!--pages/index/book.wxml-->
+<view class="mb_30 p_30">
+  <view class="row bg_f flex p_lr_30 border_b_e3 mb_20">
+    <view class="key font_14 color_3">联系方式</view>
+    <input placeholder='请输入联系方式' type='number' maxlength='11' class="flex_1 value font_14 color_3 text_right"></input>
+  </view>
+  <view class="row bg_f flex p_30">
+    <view class="remark font_14 color_3">备注</view>
+    <textarea placeholder='' class="font_14 color_3"></textarea>
+  </view>
+</view>
+<view class="p_30">
+  <button class="bg_theme color_f">预约</button>
+</view>
+<view class="online_consulting">
+  <image src="../../images/online_consulting.png" class="online_consulting_img"></image>
+  <button open-type="contact" class="online_consulting_btn"></button>
+</view>

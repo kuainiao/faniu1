@@ -1,0 +1,22 @@
+/* pages/customer/caseList.wxss */
+.list{
+  padding: 46rpx 30rpx 0;
+}
+.item{
+  padding: 30rpx 30rpx 30rpx 60rpx;
+  margin-bottom: 26rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 1px 1px #ccc;
+  box-sizing: border-box;
+  background: #fff url('http://static.faniuwenda.com/lawcase/sysimg/bgline_y.png') repeat-y 0 0;
+}
+.title_box{
+  display: flex;
+}
+.title{
+  flex: 1;
+}
+.status{
+  width: 60px;
+}

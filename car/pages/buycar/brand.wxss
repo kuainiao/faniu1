@@ -1,0 +1,106 @@
+/* pages/buycar/brand.wxss */
+page{
+  height: 100%;
+  background-color: #f3f4f6;
+}
+.hot_list{
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+.hot_item{
+  width: 20%;
+  float: left;
+  padding: 15rpx 0;
+  position: relative;
+}
+.hot_item_img{
+  width: 68rpx;
+  height: 50rpx;
+}
+.list{
+
+}
+.item{
+  padding: 30rpx 0;
+  position: relative;
+}
+.item::after{
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #e3e3e3;
+  position: absolute;
+  left: 40px;
+  right: 0;
+  bottom: 0;
+  transform: scaleY(0.5);
+}
+.item:last-child::after{
+  height: 0;
+}
+.item_img{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.k_list{
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.k_item{
+  width: 24px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+}
+.mask{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.brand_child_box{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 30%;
+  bottom: 0;
+  z-index: 101;
+  background-color: #fff;
+}
+.brand_child_item{
+  position: relative;
+}
+.brand_child_item::after{
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #e3e3e3;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleY(0.5);
+}
+.brand_child_item:last-child::after{
+  height: 0;
+}
+.brandradio{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.brandradio[checked] + view{
+  color: #4b99fd;
+}
+.brandtype{
+  position: relative;
+}

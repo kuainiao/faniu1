@@ -1,0 +1,130 @@
+/* pages/applyForLawyer/applyForLawyer.wxss */
+page{
+  background-color: #f4f4f4;
+}
+.container{
+  padding: 0 20rpx;
+}
+/*头部*/
+.header{
+  display: flex;
+  height: 100rpx;
+  padding:50rpx 30rpx;
+  background-color: rgba(0,0,0,0.5);
+}
+.header_l{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+}
+.header_l .img{
+  width: 100rpx;
+  height: 100rpx;
+  border: 2px solid #ffb512;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.header_r{
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.consulting{
+  margin: 20rpx; 
+  padding: 20rpx;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+.consulting image{
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.apply_box{
+  margin-top: 150rpx;
+}
+.apply_img{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 0 auto;
+}
+.apply_img .img{
+  width: 160rpx;
+  height: 160rpx;
+}
+.apply_btn{
+  width:460rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #ffb512;
+  color: #000;
+  text-align: center;
+  margin: 20rpx auto;
+  font-size: 16px;
+}
+/*弹窗*/
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+}
+.mask_container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 660rpx;
+  height: 860rpx;
+  margin-left: -330rpx;
+  margin-top: -430rpx;
+  z-index: 11;
+  background-color: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.mask_container .img{
+  width: 100%;
+  height: 200rpx;
+  border: 1px solid red;
+}
+.mask_container .form_box{
+  padding: 30rpx;
+}
+.mask_container .form_box .row{
+  margin-bottom: 30rpx;
+}
+.mask_container .form_box input{
+  padding-left: 8px;
+  border: 1px solid #666;
+  height: 80rpx;
+  font-size: 16px;
+}
+.mask_container .form_box .btn{
+  width: 360rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  background-color: #ffb512;
+  margin: auto;
+}
+.mask_container .close{
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #ffb512;
+  border-radius: 50%;
+  font-size: 16px;
+}

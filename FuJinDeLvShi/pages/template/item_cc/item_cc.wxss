@@ -1,0 +1,8 @@
+.item_audio {overflow:hidden;padding-top:5px;line-height:36px;}
+.item_au_cc {height:36px;font-size:14px;color:#fff;width:150px;text-align:center;}
+.item_au_num {font-size:12px;color: #a6a6a6;}
+.item_ans_box {margin-right:6px;padding-right:15px;padding-left:30px;padding-bottom:10px;}
+.item_ans_cc {padding:10px;border-radius:10px;background-color:#f0f0f0;color:#333;text-align:justify;font-size:14px;line-height:22px}
+.item_cc_bar {height:36px;width:90px;margin-left:40px;}
+.item_cc_audio{height:3px;background:rgba(0,0,0,0.2);margin-top:-20px;}
+.item_cc_audio text{height:3px;background:#fff;display:block;width:0;}

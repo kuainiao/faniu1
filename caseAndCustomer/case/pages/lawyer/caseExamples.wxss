@@ -1,0 +1,30 @@
+/* pages/lawyer/caseExamples.wxss */
+@import 'caseDetail.wxss';
+.e_list{
+  padding: 30rpx;
+  margin: 30rpx 0 60rpx;
+}
+.e_item{
+  min-height: 220rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background-color: #ecebeb;
+  margin-bottom: 10rpx;
+  position: relative;
+  border-radius: 4px;
+}
+.status{
+  margin-left: -30rpx;
+  padding: 4rpx 30rpx;
+}
+.hide_eye{
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  z-index: 101;
+  text-align: center;
+}
+.hide_icon{
+  width: 20px;
+  height: 20px;
+}

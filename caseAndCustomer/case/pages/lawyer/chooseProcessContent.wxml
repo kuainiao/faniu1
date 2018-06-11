@@ -1,0 +1,40 @@
+<!--pages/lawyer/chooseProcessContent.wxml-->
+<view class='container'>
+  <form bindsubmit='gotoCaseProcess'>
+    <checkbox-group name="msgIds">
+      <view class="list">
+        <view class="item_content" wx:for="{{lawcaseMsgArray}}" wx:key="id">
+          <view class="item item_lawyer flex" wx:if="{{item.islawyer==1}}">
+            <checkbox class="checkbox" value="{{index}}" wx:if="{{!eventId}}"></checkbox>
+            <checkbox class="checkbox" value="{{index}}" wx:elif="{{!!eventId}}" checked='{{item.selected==1?true:false}}'></checkbox>
+            <view class="item_r flex flex_1">
+              <image class="head head_lawyer" src="{{item.avatar}}"></image>
+              <view class="flex_1">
+                <view class="font_12 color_9 mb_14">更新时间：{{item.addtime}}</view>
+                <view wx:for="{{item.content}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="itemName" wx:if="{{item.msgtype==2}}">
+                  <image src="{{itemName}}" class="file_img"></image>
+                </view>
+                <view class="font_14" wx:if="{{item.msgtype==1}}">{{item.content}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="item item_customer" wx:if="{{item.islawyer==0}}">
+            <checkbox class="checkbox" value="{{index}}" wx:if="{{!eventId}}"></checkbox>
+            <checkbox class="checkbox" value="{{index}}" wx:elif="{{!!eventId}}" checked='{{item.selected==1?true:false}}'></checkbox>
+            <view class="item_r flex">
+              <view class="flex_1">
+                <view class="font_12 color_9">更新时间：{{item.addtime}}</view>
+                <view wx:for="{{item.content}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="itemName" wx:if="{{item.msgtype==2}}">
+                  <image src="{{itemName}}" class="file_img"></image>
+                </view>
+                <view class="font_14" wx:if="{{item.msgtype==1}}">{{item.content}}</view>
+              </view>
+              <image class="head head_customer" src="{{item.avatar}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </checkbox-group>
+    <button class="submit" form-type='submit'>归档案件进程</button>
+  </form>
+</view>

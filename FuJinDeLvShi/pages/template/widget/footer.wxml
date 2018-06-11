@@ -1,0 +1,4 @@
+<view class="tac footerbox">
+    <view>客服热线：<text bindtap="call2Site">{{siteTel}}</text></view>
+    <view>法妞问答——3分钟100%解决你的法律问题</view>
+</view>

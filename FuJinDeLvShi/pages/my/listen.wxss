@@ -1,0 +1,4 @@
+/* pages/my_listened/my_listened.wxss */
+@import '../template/widget/footer.wxss';
+@import "../template/mynone/mynone.wxss";
+@import "../template/item_cc/item_cc.wxss";

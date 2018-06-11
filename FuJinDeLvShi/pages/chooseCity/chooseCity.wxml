@@ -1,0 +1,16 @@
+<!--pages/chooseCity/chooseCity.wxml-->
+<view class="container">
+  <!--<view class="search_box">
+    <view class="search_row">
+      <input class="search_input" placeholder="输入省名、城市名或拼音查询" bindblur="bindblur" focus='{{focus}}'/>
+      <view class="search_cancel" bindtap='bindblur'>取消</view>
+      <image></image>
+    </view>
+    <view class="search_mask {{searchMaskShow}}" bindtap='bindSearchMask'><image></image>输入省名、城市名或拼音查询</view>
+  </view>-->
+  <view>
+    <view class="list">
+      <view class="item" bindtap='gotofindLawyer' wx:for="{{cityList}}" wx:key="code" data-areaCode="{{item.code}}">{{item.name}}</view>
+    </view>
+  </view>
+</view>

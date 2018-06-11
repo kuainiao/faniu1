@@ -1,0 +1,5 @@
+<!--pages/student/index.wxml-->
+<view class="onlineask">
+  <button open-type='contact'></button>
+  <image src="../../images/online.png"></image>
+</view>

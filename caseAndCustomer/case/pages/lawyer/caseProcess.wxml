@@ -1,0 +1,28 @@
+<!--pages/lawyer/caseProcess.wxml-->
+<view class="container height_100 bg_f">
+  <form bindsubmit='lawcaseEventEdit'>
+    <view class="row mb_24">
+      <view class="key font_12">进程描述</view>
+      <input class="value value_input flex_1 font_12" placeholder='' name="content" value="{{content}}"/>
+    </view>
+    <view class="row mb_24">
+      <view class="key font_12">进程内容</view>
+      <view class="value font_12 flex_1 color_f39b07" bindtap='gotoChooseProcessContent'>{{msgIdsName==''?'请选择进程内容':msgIdsName}}</view>
+      <view class="change" bindtap='gotoChooseProcessContent' wx:if="{{!!id}}">
+        <image src="../../images/edit_change.png" class="edit_change"></image>
+        <view class="font_12">修改</view>
+      </view>
+    </view>
+    <view class="row mb_24">
+      <view class="key font_12">案件进程</view>
+      <picker class="value value_picker font_12" name="nodeId" value="{{nodeIndex}}" range='{{nodesArray}}' range-key='name' bindchange='bindNodeChange'>{{nodeIndex==null?'请选择案件进程':nodesArray[nodeIndex].name}}</picker>
+      <view class="value value_subpicker font_12 color_f39b07" bindtap='gotoCaseProcessName'>自定义进程</view>
+    </view>
+    <view class="row mb_24">
+      <view class="key font_12">选择时间</view>
+      <picker class="value value_picker font_12" mode="date" name="time" value="{{time}}" bindchange="bindTimeChange">{{time===null?'选择进程时间':time}}</picker>
+    </view>
+    <button class="submit" form-type='submit' wx:if="{{!id}}">确认</button>
+    <button class="submit" form-type='submit' wx:if="{{!!id}}">更新案件进程</button>
+  </form>
+</view>

@@ -1,0 +1,32 @@
+<!--pages/lawyer/shareCase.wxml-->
+<view class="title">{{detailMsg.title}}</view>
+<view class="case_content">
+  <view class="row flex font_12 color_9">
+    <view class="key"><image src="../../images/time.png" class="time_icon"></image>创建时间：</view>
+    <view class="value">{{detailMsg.addtime}}</view>
+  </view>
+  <view class="row flex font_14">
+    <view class="key"><image src="../../images/casetype_icon.png" class="casetype_icon"></image>案件类型：</view>
+    <view class="value">{{detailMsg.catname}}</view>
+  </view>
+  <view class="row flex font_14">
+    <view class="key"><image src="../../images/customer_icon.png" class="customer_icon"></image>当事人：</view>
+    <view class="value flex_1">
+      <view wx:for="{{litigants}}" wx:key="id">{{item.name}} {{item.mobile}}</view>
+      <view wx:if="{{litigants.length==0}}">暂无</view>
+    </view>
+  </view>
+  <view class="row flex font_14">
+    <view class="key"><image src="../../images/remark_icon.png" class="remark_icon"></image>备注信息：</view>
+    <view class="value flex_1">{{detailMsg.content?detailMsg.content:'暂无信息'}}</view>
+  </view>
+</view>
+<view class="e_list">
+  <view class="e_item" wx:for="{{lawcaseEventsArray}}" wx:key="id" wx:if="{{item.case_show==1}}">
+    <view class='mb_14'>
+      <text class='status bg_f39b07 color_f font_13'>{{item.node_name}}</text>
+    </view>
+    <view class='font_12 color_9 mb_14'>{{item.time}}</view>
+    <view class="font_13">{{item.content}}</view>
+  </view>
+</view>

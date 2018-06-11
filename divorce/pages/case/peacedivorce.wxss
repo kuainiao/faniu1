@@ -1,0 +1,8 @@
+/* pages/case/peacedivorce.wxss */
+.fixed_bottom{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/shopinfo",
+    "pages/index/news",
+    "pages/buycar/index",
+    "pages/sellcar/index",
+    "pages/my/index",
+    "pages/buycar/detail",
+    "pages/buycar/brand",
+    "pages/index/book"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4b99fd",
+    "navigationBarTitleText": "汽车",
+    "navigationBarTextStyle": "#ffffff"
+  },
+  "tabBar": {
+    "selectedColor": "#4b99fd",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_active.png"
+      },
+      {
+        "pagePath": "pages/buycar/index",
+        "text": "买车",
+        "iconPath": "images/buycar.png",
+        "selectedIconPath": "images/buycar_active.png"
+      },
+      {
+        "pagePath": "pages/sellcar/index",
+        "text": "卖车",
+        "iconPath": "images/sellcar.png",
+        "selectedIconPath": "images/sellcar_active.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_active.png"
+      }
+    ]
+  }
+}

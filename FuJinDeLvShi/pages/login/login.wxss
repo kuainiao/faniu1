@@ -1,0 +1,13 @@
+page{background:#fff;}
+.mandate_box{width:95%;margin:0 auto;}
+.mandate_t {border-bottom:1px solid #efefee;}
+.mandate_t .img{width:3.875rem;height:3.875rem;border-radius:0.625rem;border:1px solid #efefee;margin:2.75rem auto 0.75rem;}
+.mandate_t .t{font-size:1rem;font-weight:bold;}
+.mandate_t .tips{font-size:0.75rem;line-height:2.875rem;color:#acacac;padding-bottom:0.625rem;}
+.mandate_box .tips01{font-size:0.875rem;padding:2rem 0 1.2rem;}
+.mandate_box .tips02{font-size:0.75rem;color:#acacac;padding-bottom:2.4rem;}
+.mandate_box .btns {justify-content:space-between;}
+.mandate_box .btns .btn{font-size:1rem;width:47.5%;margin:0;padding:0;border-radius:0.35rem;color:#fff;}
+.mandate_box .btns .btn01{background:#c5c5c5;border:1px solid #9b9b9b;}
+.mandate_box .btns .btn02{background:#ffb512;border:1px solid #c90;}
+.mandate_box .btns .btn02::after{content:none;}

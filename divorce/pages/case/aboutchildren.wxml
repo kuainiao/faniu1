@@ -1,0 +1,49 @@
+<!--pages/case/aboutchildren.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='formbox bg_f mt_20'>
+    <view class="p_lr_36 section">
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker line_h40 font_14 color_3 arrow_right">
+          你是男方还是女方： {{time}}
+        </view>
+      </picker>
+    </view>
+    <view class="p_lr_36 section">
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker line_h40 font_14 color_3 arrow_right">
+          出生年月： {{time}}
+        </view>
+      </picker>
+    </view>
+    <view class="p_lr_36 section line_h40 font_14 color_3">
+      <view class='border_b_dc flex'>
+        <view>你的年收入：</view>
+        <input type='text' placeholder='请输入' class='flex_1'></input>
+        <view>万元</view>
+      </view>
+    </view>
+    <view class="p_lr_36 section line_h40 font_14 color_3">
+      <view class='border_b_dc flex'>
+        <view>对方年收入：</view>
+        <input type='text' placeholder='请输入' class='flex_1'></input>
+        <view>万元</view>
+      </view>
+    </view>
+    <view class="p_lr_36 section">
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker line_h40 font_14 color_3 arrow_right">
+          小孩现随谁生活： {{time}}
+        </view>
+      </picker>
+    </view>
+    <view class="p_lr_36 section line_h40 font_14 color_3">
+      <view class='border_b_dc flex'>
+        <view>手机号码：</view>
+        <input type='text' placeholder='请输入' class='flex_1'></input>
+      </view>
+    </view>
+  </view>
+  <view class="section mt_50 mb_50 p_lr_36">
+    <button formType="submit" class="bg_theme color_f">提交</button>
+  </view>
+</form>

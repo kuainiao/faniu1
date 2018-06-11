@@ -1,0 +1,11 @@
+<view class="pagebox">
+    <view class="formmsg_tt"><icon type="success" size="50" color="#f55"></icon> 你的咨询已经<text class="fontClrf55">发布成功！</text></view>
+    <view class="formmsg_btn borderT">
+        <view class="formmsg_tips">您还可以</view>
+        <view class="weui-flex btns_con">
+            <view class="weui-flex__item bgf55"><navigator url="{{askUrl}}">查看发布的咨询</navigator></view>
+            <view class="weui-flex__item bg0dc"><navigator url="/pages/my/index" open-type="switchTab">进入用户中心</navigator></view>
+        </view>
+    </view>
+</view>
+<include src="../../template/widget/footer.wxml" />

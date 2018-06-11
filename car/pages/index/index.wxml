@@ -1,0 +1,209 @@
+<!--pages/index/index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#4b99fd" indicator-color="#ffffff">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='p_lr_30 mb_20 bg_f'>
+  <view class='logo_box border_b_e3 p_tb_30 flex'>
+    <image src="" class="index_logo mr_16 bg_theme"></image>
+    <view class='shopname flex_1 color_3 font_16'>车豪二手车交易</view>
+  </view>
+  <view class="address_tel_box p_tb_30 flex v_center">
+    <image bindtap='openmap' src='../../images/icon_position.png' class="icon_position mr_16"></image>
+    <view bindtap='openmap' class="flex_1 color_6 font_14 p_l_r_18">历下区解放东路黄金时代广场G座908(近山东省立东院和山东省高级人民法院)</view>
+    <image src='../../images/icon_tel.png' class="icon_tel ml_12" bindtap='calltel'></image>
+  </view>
+</view>
+<view class="shop_model mb_20 bg_f flex p_30">
+  <view class="flex_1 text_center">
+    <navigator url="/pages/index/shopinfo">
+      <image src="../../images/shopmsg.png" class="shop_model_icon"></image>
+      <view class="shop_model_title color_3 font_14">店铺信息</view>
+    </navigator>
+  </view>
+  <view class="flex_1 text_center">
+    <navigator url="/pages/index/news">
+      <image src="../../images/information.png" class="shop_model_icon"></image>
+    <view class="shop_model_title color_3 font_14">资讯</view>
+    </navigator>
+  </view>
+  <view class="flex_1 text_center">
+    <navigator url="/pages/index/book">
+      <image src="../../images/freebook.png" class="shop_model_icon"></image>
+      <view class="shop_model_title color_3 font_14">预约询价</view>
+    </navigator>
+  </view>
+</view>
+<view class="p_15 mb_20 bg_f ">
+  <view class="list_title text_center color_yellow mb_12 line_h40">
+    <text class="">—</text>
+    <text class='m_l_r_20 font_16'>热卖汽车</text>
+    <text class="">—</text>
+  </view>
+  <view class="list clearfix">
+    <view class="item">
+      <navigator url="/pages/buycar/detail">
+        <view class='border_e3'>
+          <image src='../../images/car.jpg' class='item_img mb_10'></image>
+          <view class='p_lr_15'>
+            <view class="item_title font_14 color_0 mb_10">本田锋范</view>
+            <view class="item_title font_12 color_3 mb_10">2017款 1.5L CVT舒适版</view>
+            <view class="item_title font_12 color_9 mb_10">2016年09月 | 4.0万公里</view>
+            <view class="item_price_box flex h_space_between mb_10">
+              <view class="item_o_price font_14 color_red">7.98万</view>
+              <view class="item_member_price font_12 color_9">
+                <text>新车：</text>
+                <text class='line_through'>8.98万</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/buycar/detail">
+        <view class='border_e3'>
+          <image src='../../images/car.jpg' class='item_img mb_10'></image>
+          <view class='p_lr_15'>
+            <view class="item_title font_14 color_0 mb_10">本田锋范</view>
+            <view class="item_title font_12 color_3 mb_10">2017款 1.5L CVT舒适版</view>
+            <view class="item_title font_12 color_9 mb_10">2016年09月 | 4.0万公里</view>
+            <view class="item_price_box flex h_space_between mb_10">
+              <view class="item_o_price font_14 color_red">7.98万</view>
+              <view class="item_member_price font_12 color_9">
+                <text>新车：</text>
+                <text class='line_through'>8.98万</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/buycar/detail">
+        <view class='border_e3'>
+          <image src='../../images/car.jpg' class='item_img mb_10'></image>
+          <view class='p_lr_15'>
+            <view class="item_title font_14 color_0 mb_10">本田锋范</view>
+            <view class="item_title font_12 color_3 mb_10">2017款 1.5L CVT舒适版</view>
+            <view class="item_title font_12 color_9 mb_10">2016年09月 | 4.0万公里</view>
+            <view class="item_price_box flex h_space_between mb_10">
+              <view class="item_o_price font_14 color_red">7.98万</view>
+              <view class="item_member_price font_12 color_9">
+                <text>新车：</text>
+                <text class='line_through'>8.98万</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/buycar/detail">
+        <view class='border_e3'>
+          <image src='../../images/car.jpg' class='item_img mb_10'></image>
+          <view class='p_lr_15'>
+            <view class="item_title font_14 color_0 mb_10">本田锋范</view>
+            <view class="item_title font_12 color_3 mb_10">2017款 1.5L CVT舒适版</view>
+            <view class="item_title font_12 color_9 mb_10">2016年09月 | 4.0万公里</view>
+            <view class="item_price_box flex h_space_between mb_10">
+              <view class="item_o_price font_14 color_red">7.98万</view>
+              <view class="item_member_price font_12 color_9">
+                <text>新车：</text>
+                <text class='line_through'>8.98万</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class="p_15 mb_20 bg_f">
+  <view class="list_title text_center color_yellow mb_12 line_h40">
+    <text class="">—</text>
+    <text class="m_l_r_20 font_16">最新上架</text>
+    <text class="">—</text>
+  </view>
+  <view class="list clearfix">
+    <view class="item">
+      <navigator url="/pages/buycar/detail">
+        <view class='border_e3'>
+          <image src='../../images/car.jpg' class='item_img mb_10'></image>
+          <view class='p_lr_15'>
+            <view class="item_title font_14 color_0 mb_10">本田锋范</view>
+            <view class="item_title font_12 color_3 mb_10">2017款 1.5L CVT舒适版</view>
+            <view class="item_title font_12 color_9 mb_10">2016年09月 | 4.0万公里</view>
+            <view class="item_price_box flex h_space_between mb_10">
+              <view class="item_o_price font_14 color_red">7.98万</view>
+              <view class="item_member_price font_12 color_9">
+                <text>新车：</text>
+                <text class='line_through'>8.98万</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/buycar/detail">
+        <view class='border_e3'>
+          <image src='../../images/car.jpg' class='item_img mb_10'></image>
+          <view class='p_lr_15'>
+            <view class="item_title font_14 color_0 mb_10">本田锋范</view>
+            <view class="item_title font_12 color_3 mb_10">2017款 1.5L CVT舒适版</view>
+            <view class="item_title font_12 color_9 mb_10">2016年09月 | 4.0万公里</view>
+            <view class="item_price_box flex h_space_between mb_10">
+              <view class="item_o_price font_14 color_red">7.98万</view>
+              <view class="item_member_price font_12 color_9">
+                <text>新车：</text>
+                <text class='line_through'>8.98万</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/buycar/detail">
+        <view class='border_e3'>
+          <image src='../../images/car.jpg' class='item_img mb_10'></image>
+          <view class='p_lr_15'>
+            <view class="item_title font_14 color_0 mb_10">本田锋范</view>
+            <view class="item_title font_12 color_3 mb_10">2017款 1.5L CVT舒适版</view>
+            <view class="item_title font_12 color_9 mb_10">2016年09月 | 4.0万公里</view>
+            <view class="item_price_box flex h_space_between mb_10">
+              <view class="item_o_price font_14 color_red">7.98万</view>
+              <view class="item_member_price font_12 color_9">
+                <text>新车：</text>
+                <text class='line_through'>8.98万</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/buycar/detail">
+        <view class='border_e3'>
+          <image src='../../images/car.jpg' class='item_img mb_10'></image>
+          <view class='p_lr_15'>
+            <view class="item_title font_14 color_0 mb_10">本田锋范</view>
+            <view class="item_title font_12 color_3 mb_10">2017款 1.5L CVT舒适版</view>
+            <view class="item_title font_12 color_9 mb_10">2016年09月 | 4.0万公里</view>
+            <view class="item_price_box flex h_space_between mb_10">
+              <view class="item_o_price font_14 color_red">7.98万</view>
+              <view class="item_member_price font_12 color_9">
+                <text>新车：</text>
+                <text class='line_through'>8.98万</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

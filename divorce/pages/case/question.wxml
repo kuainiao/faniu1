@@ -1,0 +1,39 @@
+<!--pages/case/question.wxml-->
+<view class='p_lr_20 line_h40 bg_f2 color_6 font_14 mb_20'>请根据你的个人情况，回答如下问题：</view>
+<view class=''>
+  <form bindsubmit='formSubmit'>
+    <view class='p_36 bg_f'>
+      <view class="section section_gap mb_30">
+        <view class="section__title font_14 color_3 mb_10">1.男女双方均同意离婚吗？</view>
+        <radio-group name="radio-group">
+          <label class='font_14 color_3'><radio value="radio1" color='#209ae8'/>是</label>
+          <label class='font_14 color_3'><radio value="radio2" color='#209ae8'/>否</label>
+        </radio-group>
+      </view>
+      <view class="section section_gap mb_30">
+        <view class="section__title font_14 color_3 mb_10">2.双方对夫妻共有财产分割问题协商好了吗？</view>
+        <radio-group name="radio-group">
+          <label class='font_14 color_3'><radio value="radio1" color='#209ae8'/>是</label>
+          <label class='font_14 color_3'><radio value="radio2" color='#209ae8'/>否</label>
+        </radio-group>
+      </view>
+      <view class="section section_gap mb_30">
+        <view class="section__title font_14 color_3 mb_10">3.双方对子女抚养问题协商好了吗？</view>
+        <radio-group name="radio-group">
+          <label class='font_14 color_3'><radio value="radio1" color='#209ae8'/>是</label>
+          <label class='font_14 color_3'><radio value="radio2" color='#209ae8'/>否</label>
+        </radio-group>
+      </view>
+      <view class="section section_gap mb_30">
+        <view class="section__title font_14 color_3 mb_10">4.双方或者任意一方的户籍和居住地相同吗？</view>
+        <radio-group name="radio-group">
+          <label class='font_14 color_3'><radio value="radio1" color='#209ae8'/>是</label>
+          <label class='font_14 color_3'><radio value="radio2" color='#209ae8'/>否</label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="btn-area p_lr_36 mt_50 mb_50">
+      <button formType="submit" class="bg_theme color_f">提交</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,212 @@
+/* pages/buycar/index.wxss */
+page{
+  background-color: #f3f4f6;
+}
+.top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.search_box{
+  height: 110rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+.search_con{
+  height: 70rpx;
+  border-radius: 70rpx;
+  background-color: #f3f4f6;
+}
+.icon_search{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 15rpx 20rpx;
+}
+.search_input{
+  padding-left: 12px;
+  box-sizing: border-box;
+  height: 70rpx;
+}
+.select_box{
+  height: 88rpx;
+}
+.icon_arrow_down{
+  width: 22rpx;
+  height: 12rpx;
+}
+.list{
+  padding-top: 209rpx; 
+}
+navigator:last-child .item{
+  border-bottom: none;
+}
+.item_img{
+  width: 240rpx;
+  height: 182rpx;
+  margin-right: 30rpx;
+}
+.tab_list1{
+  position: fixed;
+  top: 198rpx;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
+  padding: 0 30rpx;
+}
+.tab_item1{
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #f3f4f6;
+  position: relative;
+}
+.tab_item1 radio{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  opacity: 0;
+}
+.tab_item1_dui{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 33rpx;
+  height: 24rpx;
+  margin: 32rpx 0;
+  opacity: 0;
+}
+.tab_item1 radio[checked] + view{
+  color: #4b99fd;
+}
+.tab_item1 radio[checked] + view .tab_item1_dui{
+  opacity: 1;
+}
+.tabmask1{
+  position: fixed;
+  top: 198rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.tab_list3{
+  position: fixed;
+  top: 198rpx;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
+  padding: 0 15rpx;
+}
+.tab_item3{
+  float: left;
+  width: 33.33%;
+  padding: 15rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.tab_item3_btn{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-color: #f3f4f6;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.tab_item3 radio{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  opacity: 0;
+}
+.tab_item3 radio[checked] + .tab_item3_btn{
+  border: 1px solid #4b99fd;
+  background-color: #e2edfb;
+  color: #4b99fd;
+}
+.tab3_input{
+  height: 88rpx;
+  border: 1px solid #e3e3e3;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.tab3_btn{
+  width: 60px;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0;
+}
+.tabmask3{
+  position: fixed;
+  top: 198rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.tab_list4{
+  position: fixed;
+  top: 198rpx;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
+  padding: 0 15rpx 30rpx;
+}
+.tab_item4{
+  float: left;
+  width: 33.33%;
+  padding: 15rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.tab_item4_btn{
+  width: 100%;
+  height: 150rpx;
+  text-align: center;
+  background-color: #f3f4f6;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.tab_item4 radio{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  opacity: 0;
+}
+.tab_item4 radio[checked] + .tab_item4_btn{
+  border: 1px solid #4b99fd;
+  background-color: #e2edfb;
+}
+.tab_item4 radio[checked] + .tab_item4_btn .tab_item4_type{
+  color: #4b99fd;
+}
+.tab_item4_img{
+  width: 130rpx;
+  height: 49rpx;
+}
+.tabmask4{
+  position: fixed;
+  top: 198rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+  background-color: rgba(0, 0, 0, 0.5);
+}

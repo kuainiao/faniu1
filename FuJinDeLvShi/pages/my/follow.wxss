@@ -1,0 +1,5 @@
+/* pages/my_attention/my_attention.wxss */
+@import '../template/widget/footer.wxss';
+@import "../template/mynone/mynone.wxss";
+@import "../template/item_lawyer/item_lawyer.wxss";
+

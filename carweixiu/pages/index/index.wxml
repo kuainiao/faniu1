@@ -1,0 +1,125 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#4b99fd" indicator-color="#ffffff">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="p_30 flex v_center bg_f border_b_e3">
+  <image src="" class="header"></image>
+  <view class="flex_1 font_14 color_3 m_lr_30">临沂汽车免喷漆凹陷玻璃修复</view>
+</view>
+<view class='flex p_30 bg_f v_center mb_20'>
+  <image src="../../images/icon_position.png" class="icon_position"></image>
+  <view class="flex_1 font_14 color_6 m_lr_30">驾校驾校驾校驾校驾校驾校驾校驾校驾校驾校驾校驾校驾校驾校驾校驾校驾校驾校驾校</view>
+  <image src="../../images/icon_tel.png" class="icon_tel"></image>
+</view>
+<view class="flex p_lr_15">
+  <navigator class="flex flex_1 m_lr_15 v_center h_center bg_f p_tb_30 border_radius_4" url="/pages/index/shopinfo">
+    <view>
+      <image src="../../images/icon_index01.png" class="icon_index mb_20"></image>
+      <view class="font_14 color_3">店铺信息</view>
+    </view>
+  </navigator>
+  <navigator class="flex flex_1 m_lr_15 v_center h_center bg_f p_tb_30 border_radius_4" url="/pages/index/example">
+    <view>
+      <image src="../../images/icon_index02.png" class="icon_index mb_20"></image>
+      <view class="font_14 color_3">维修案例</view>
+    </view>
+  </navigator>
+  <navigator class="flex flex_1 m_lr_15 v_center h_center bg_f p_tb_30 border_radius_4" url="/pages/index/book">
+    <view>
+      <image src="../../images/icon_index03.png" class="icon_index mb_20"></image>
+      <view class="font_14 color_3">免费预约</view>
+    </view>
+  </navigator>
+</view>
+<view class='font_14 color_0 height_50 line_h50 text_center'>—— 案例推荐 ——</view>
+<view class="mb_20">
+  <view class="item p_tb_15 bg_f ">
+    <view class="font_14 color_3 p_lr_30 height_40 line_h40 text_center">标题标题标题标题司法机关</view>
+    <view class="font_12 color_6 p_lr_30">内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述</view>
+    <view class="imglist p_15 clearfix">
+      <view class="imgitem p_15 float_left">
+        <image src="" ></image>
+      </view>
+      <view class="imgitem p_15 float_left">
+        <image src="" ></image>
+      </view>
+      <view class="imgitem p_15 float_left">
+        <image src="" ></image>
+      </view>
+    </view>
+    <view class="flex h_end">
+      <view class="flex v_center p_15 mr_30">
+        <image src="../../images/icon_zan.png" class="icon_zan mr_10"></image>
+        <image src="../../images/icon_zan_on.png" class="icon_zan mr_10"></image>
+        <view class="font_12 color_theme">1718</view>
+      </view>
+      <view class="flex v_center p_15">
+        <image src="../../images/icon_collect.png" class="icon_collect mr_10"></image>
+        <image src="../../images/icon_collect_on.png" class="icon_zan mr_10"></image>
+        <view class="font_12 color_theme">51215</view>
+      </view>
+    </view>
+  </view>
+  <view class="item p_tb_15 bg_f ">
+    <view class="font_14 color_3 p_lr_30 height_40 line_h40 text_center">标题标题标题标题司法机关</view>
+    <view class="font_12 color_6 p_lr_30">内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述</view>
+    <view class="imglist p_15 clearfix">
+      <view class="imgitem p_15 float_left">
+        <image src="" ></image>
+      </view>
+      <view class="imgitem p_15 float_left">
+        <image src="" ></image>
+      </view>
+      <view class="imgitem p_15 float_left">
+        <image src="" ></image>
+      </view>
+    </view>
+    <view class="flex h_end">
+      <view class="flex v_center p_15 mr_30">
+        <image src="../../images/icon_zan.png" class="icon_zan mr_10"></image>
+        <image src="../../images/icon_zan_on.png" class="icon_zan mr_10"></image>
+        <view class="font_12 color_theme">1718</view>
+      </view>
+      <view class="flex v_center p_15">
+        <image src="../../images/icon_collect.png" class="icon_collect mr_10"></image>
+        <image src="../../images/icon_collect_on.png" class="icon_zan mr_10"></image>
+        <view class="font_12 color_theme">51215</view>
+      </view>
+    </view>
+  </view>
+  <view class="item p_tb_15 bg_f ">
+    <view class="font_14 color_3 p_lr_30 height_40 line_h40 text_center">标题标题标题标题司法机关</view>
+    <view class="font_12 color_6 p_lr_30">内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述</view>
+    <view class="imglist p_15 clearfix">
+      <view class="imgitem p_15 float_left">
+        <image src="" ></image>
+      </view>
+      <view class="imgitem p_15 float_left">
+        <image src="" ></image>
+      </view>
+      <view class="imgitem p_15 float_left">
+        <image src="" ></image>
+      </view>
+    </view>
+    <view class="flex h_end">
+      <view class="flex v_center p_15 mr_30">
+        <image src="../../images/icon_zan.png" class="icon_zan mr_10"></image>
+        <image src="../../images/icon_zan_on.png" class="icon_zan mr_10"></image>
+        <view class="font_12 color_theme">1718</view>
+      </view>
+      <view class="flex v_center p_15">
+        <image src="../../images/icon_collect.png" class="icon_collect mr_10"></image>
+        <image src="../../images/icon_collect_on.png" class="icon_zan mr_10"></image>
+        <view class="font_12 color_theme">51215</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="onlineask">
+  <button open-type='contact'></button>
+  <image src="../../images/online.png"></image>
+</view>

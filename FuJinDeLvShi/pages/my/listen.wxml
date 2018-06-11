@@ -1,0 +1,34 @@
+<!--pages/my_listened/my_listened.wxml-->
+<navigator hidden delta="1" class="tt" open-type="navigateBack"> 〈 我听过的问题</navigator>
+
+<!-- “我听过的问题”初始状态 -->
+<view wx:if="{{!isListen}}">
+   <import src="../template/mynone/mynone.wxml" />
+   <template is="mynone" data="{{type:'warn',size:'50',color:'#f55',tt:'你还没有收听过问题哦～',btntext:'去看看热门咨询',btnurl:'../index/index'}}"></template>
+</view>
+
+<!-- “我听过的问题”有记录状态 -->
+<block wx:else>
+    <view class="my_attention_tips">已听问题<text>{{listenCounts}}</text></view>
+
+    <!-- 我听过的问题 -->
+    <view wx:for="{{listenList}}" wx:key="qid">
+    	<navigator url="/pages/ask/show?id={{item.qid}}" class="bgfff borderTB p10_15 mb10">
+	        <view class="user_cc">{{item.content}}</view>
+	    </navigator>
+	    <view class="bgfff borderB p10_15 mb10" style="margin-top:-30px;">
+	        <view class="weui-flex">
+	            <navigator url="/pages/lawyer/home?openid={{item.openid}}" class="item_img"><view style="background:url({{item.avatar}}) no-repeat center center;background-size:cover;"></view><text hidden="{{item.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text></navigator>
+	            <navigator url="/pages/lawyer/home?openid={{item.openid}}" class="item_audio weui-flex__item">
+	            	<view class="item_au_num"><text>{{item.name}}律师</text><text hidden="{{item.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/{{item.vipIcon}}) no-repeat center center;background-size:contain;" class="vip mt8"></text><text>|{{item.area}}</text><text>{{item.firm}}</text></view>
+	                <view class="item_au_num fl">{{item.timed}}</view>
+	                <view class="item_au_num fr" hidden="{{order==2}}"><text>{{item.listen}}</text>人收听</view>
+	            </navigator>
+	        </view>
+	    </view>
+    </view>
+
+</block>
+
+<!-- 客服电话 -->
+<include src="../../template/widget/footer.wxml" />

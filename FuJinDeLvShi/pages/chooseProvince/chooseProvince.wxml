@@ -1,0 +1,36 @@
+<!--pages/chooseProvince/chooseProvince.wxml-->
+<view class="container">
+  <!--<view class="search_box">
+    <view class="search_row">
+      <input class="search_input" placeholder="输入省名、城市名或拼音查询" bindblur="bindblur" focus='{{focus}}'/>
+      <view class="search_cancel" bindtap='bindblur'>取消</view>
+      <image></image>
+    </view>
+    <view class="search_mask {{searchMaskShow}}" bindtap='bindSearchMask'><image></image>输入省名、城市名或拼音查询</view>
+  </view>
+  <view class="{{searchMaskShow}}">
+    <view class="txt">定位到的位置</view>
+    <view class="position"><image></image>定位到的城市：济南</view>
+  </view>
+  <view class="{{searchMaskShow}}">
+    <view class="txt">常用的城市</view>
+    <view class="used_city">
+      <view class="city city1">广州</view>
+      <view class="city city2">北京</view>
+    </view>
+  </view>-->
+  <view>
+    <view class="txt">按行政区选择</view>
+    <view class="list">
+      <view class="item" bindtap="gotochooseCity" wx:for="{{provinceList}}" wx:key="code" data-index="{{index}}" data-areaCode="{{item.code}}">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="{{provinceSearch}}">
+    <view class="txt">省份</view>
+    <view class="search_txt">山东</view>
+  </view>
+  <view class="{{citySearch}}">
+    <view class="txt">城市</view>
+    <view class="search_txt">北京</view>
+  </view>
+</view>

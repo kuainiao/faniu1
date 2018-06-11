@@ -1,0 +1,48 @@
+<!--pages/lawyer/caseList.wxml-->
+<view class="container">
+  <view class="fixed_con bg_f">
+    <view class="tabs">
+      <button class="tab {{active=='active1'?'active':''}}" disabled="{{btn=='btn1'}}" bindtap='getAllData'>全部</button>
+      <button class="tab {{active=='active2'?'active':''}}" disabled="{{btn=='btn2'}}" bindtap='getStatus1Data'>进行中</button>
+      <button class="tab {{active=='active3'?'active':''}}" disabled="{{btn=='btn3'}}" bindtap='getStatus7Data'>已结案</button>
+      <button class="tab {{active=='active4'?'active':''}}" disabled="{{btn=='btn4'}}" bindtap='getStatus9Data'>成功案例</button>
+    </view>
+    <form bindsubmit='getKeyWordData'>
+      <view class="search_box flex">
+        <input placeholder='搜索' class="search_input flex_1" name="keyword" bindconfirm="getKeyWordData"/>
+        <view class="search_icon">
+          <image src="../../images/search.png"></image>
+        </view>
+        <button formType="submit" class="search_btn"></button>
+      </view>
+    </form>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{caseListArray}}" wx:key="id">
+      <view class="flex mb_20">
+        <view class="flex_1 font_12 color_9">创建时间：{{item.addtime}}</view>
+        <view class="font_14 color_f39b07" wx:if="{{item.status==1}}">进行中</view>
+        <view class="font_14 color_54b7fa" wx:elif="{{item.status==7}}">已结案</view>
+        <view class="font_14 color_54b7fa" wx:elif="{{item.status==8}}">已结案</view>
+        <view class="font_14 color_44c74c" wx:elif="{{item.status==9}}">成功案例</view>
+      </view>
+      <view class='font_14 mb_20'>{{item.title}}</view>
+      <view>
+        <button class="btn" data-id="{{item.id}}" data-status="{{item.status}}" bindtap='gotoCaseDetail' wx:if="{{item.status==1}}">案件记录></button>
+        <button class="btn" data-id="{{item.id}}" data-status="{{item.status}}" bindtap='gotoCaseDetail' wx:elif="{{item.status==7}}">案件记录></button>
+        <button class="btn" data-id="{{item.id}}" data-status="{{item.status}}" bindtap='gotoCaseExamples' wx:elif="{{item.status==8}}">生成案例></button>
+        <button class="btn" data-id="{{item.id}}" data-status="{{item.status}}" bindtap='gotoSuccessCase' wx:elif="{{item.status==9}}">案件详情></button>
+      </view>
+      <view class="set_list" wx:if="{{item.status==1||item.status==9}}">
+        <view class="set_item edit" bindtap='gotoCaseDetail' data-id="{{item.id}}" wx:if="{{!(item.status==9)}}">
+          <image src="../../images/editor_icon.png"></image>
+          <view class="font_12">编辑</view>
+        </view>
+        <view class="set_item delete" bindtap='lawcaseDel' data-id="{{item.id}}" wx:if="{{item.msgcount==0||item.status==9}}">
+          <image src="../../images/delete_icon.png"></image>
+          <view class="font_12">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

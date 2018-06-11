@@ -1,0 +1,53 @@
+<!--pages/my_asked/my_asked.wxml-->
+<navigator hidden delta="1" class="tt" open-type="navigateBack"> 〈 我问过的问题</navigator>
+
+<!-- “我问过的问题”初始状态 -->
+<view wx:if="{{!isAsk}}">
+  <!--<import src="../template/mynone/mynone.wxml" />
+  <template is="mynone" data="{{type:'warn',size:'50',color:'#ffb512',tt:'你还没有提问哦～',btntext:'去问一个',btnurl:'/pages/ask/post'}}"></template>-->
+  <view class="pagebox tac my_none_box">
+  <view class="my_none_cc"><icon type="warn" size="50" color="#ffb512"></icon><text class="none">你还没有提问哦～</text></view>
+    <button data-url="pages/ask/post" class="btn_f55 w75" bindtap='gotoAskPost'>去问一个</button>
+  </view>
+</view>
+<!-- “我问过的问题”其他状态 -->
+<block wx:else>
+  <view class="my_attention_tips">已提问
+    <text>{{askCounts}}</text>
+  </view>
+  <view wx:if="{{false}}" class="tac textstyle12_22 p0_15 fontClr999">分享到微信群或发送给好友，答案每被收听一次，你从中分成0.3元</view>
+
+  <!-- 我问过的问题列表 -->
+  <view wx:for="{{askList}}" class="p10_15 borderTB bgfff mb10">
+    <view wx:if="{{item.status==2 && item.money>0 && item.paystatus==0}}" bindtap="bindPay" data-id="{{item.id}}" class="item_tt">{{item.content}}
+      <text wx:if="{{item.money>0}}" class="fr fontClrf55">￥{{item.money}} 立即支付</text>
+    </view>
+    <navigator wx:else url="/pages/ask/show?id={{item.id}}" class="item_tt">{{item.content}}
+      <text wx:if="{{item.paystatus>0}}" class="fr fontClrf55">￥{{item.money}}</text>
+    </navigator>
+    <view hidden="{{item.status<7}}" class="weui-flex">
+      <navigator url="/pages/lawyer/home?openid={{item.expert}}" class="item_img">
+        <view style="background:url({{item.avatar}}) no-repeat center center;background-size:cover;"></view>
+        <text hidden="{{item.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+      </navigator>
+      <navigator url="/pages/lawyer/home?openid={{item.expert}}" class="item_audio weui-flex__item">
+        <view class="item_tips">
+          <view>{{item.name}}律师</view>
+          <text hidden class="{{item.groupid>=10?'vip':''}}" style="background:url({{item.vipIcon}}) no-repeat center center;background-size:contain;"></text>
+          <view>{{item.area}}</view>
+          <view>{{item.firm}}</view>
+        </view>
+        <view class="item_au_num fl">
+          <text>{{item.timed}}</text>
+        </view>
+        <view class="item_au_num fr">
+          <text>{{item.listen}}</text>人收听</view>
+      </navigator>
+    </view>
+  </view>
+</block>
+
+
+
+<!-- 客服电话 -->
+<include src="../../template/widget/footer.wxml" />

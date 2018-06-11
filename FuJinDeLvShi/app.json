@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/findLawyer/findLawyer",
+    "pages/lawyerList/lawyerList",
+    "pages/lawyerDetail/lawyerDetail",
+    "pages/claim/claim",
+    "pages/applyForLawyer/applyForLawyer",
+    "pages/chooseProvince/chooseProvince",
+    "pages/chooseCity/chooseCity",
+    "pages/my/ask",
+    "pages/my/call",
+    "pages/my/follow",
+    "pages/my/index",
+    "pages/my/listen",
+    "pages/my/my",
+    "pages/login/login",
+    "pages/ask/post",
+    "pages/ask/postSuccess",
+    "pages/ask/show",
+    "pages/ask/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "好律师导航",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#f4f4f4"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#ffb512",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/findLawyer/findLawyer",
+        "text": "找律师",
+        "iconPath": "img/search.png",
+        "selectedIconPath": "img/search_y.png"
+      },
+      {
+        "pagePath": "pages/ask/post",
+        "text": "发布咨询",
+        "iconPath": "img/talk.png",
+        "selectedIconPath": "img/talk_y.png"
+      },
+      {
+        "pagePath": "pages/applyForLawyer/applyForLawyer",
+        "text": "申请入驻",
+        "iconPath": "img/joinus.png",
+        "selectedIconPath": "img/joinus_y.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "img/my.png",
+        "selectedIconPath": "img/my_y.png"
+      }
+    ],
+    "position": "bottom"
+  }
+}

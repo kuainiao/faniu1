@@ -1,0 +1,20 @@
+<template name="item_lawyer">
+<view class="bgfff borderTB p10_15 mb10">
+    <view class="weui-flex">
+        <navigator url="/pages/lawyer/home?openid={{item.openid}}" class="item_img">
+            <view style="background:url({{item.avatar}}) no-repeat center center;background-size:cover;"></view>
+            <text hidden="{{item.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/header_vip.png) no-repeat center center;background-size:cover;"></text>
+        </navigator>
+        <view class="weui-flex__item item_lw_box">
+            <view class="fl item_lw_name overfh"><text>{{item.name}}律师</text><text hidden="{{item.groupid<10}}" style="background:url(http://static.faniuwenda.com/weapp/images/{{item.vipIcon}}) no-repeat center center;background-size:contain;" class="vip mt8"></text><text>{{item.area}}</text></view>
+            <navigator url="/pages/lawyer/home?openid={{item.openid}}" class="clear item_lw_cc">{{item.intro}}</navigator>
+            <view>帮助人数：<text class="fontClrf55 fontBold">{{item.answer}}人</text>　关注人数：<text class="fontClr0dc fontBold">{{item.follow}}人</text></view>
+            <view class="weui-flex btns_con">
+                <navigator url="/pages/ask/post2?to={{item.openid}}" class="weui-flex__item bgf55"><text style="background:url(http://static.faniuwenda.com/weapp/images/icon_msg.png) no-repeat left center;background-size:24px auto;">向Ta咨询</text></navigator>
+                <navigator url="/pages/call/post2?to={{item.openid}}" class="weui-flex__item" wx:if="{{item.call_fee>0}}"><text style="background:url(http://static.faniuwenda.com/weapp/images/icon_call.png) no-repeat left center;background-size:24px auto;">电话咨询</text></navigator>
+                <view class="weui-flex__item" wx:else><text bindtap="openAlert" style="background:url(http://static.faniuwenda.com/weapp/images/icon_call.png) no-repeat left center;background-size:24px auto;">电话咨询</text></view>
+            </view>
+        </view>
+    </view>
+</view>
+</template>

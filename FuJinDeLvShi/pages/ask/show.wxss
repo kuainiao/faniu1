@@ -1,0 +1,5 @@
+/* pages/content/content.wxss */
+@import "../template/block/ask.wxss";
+@import '../template/widget/footer.wxss';
+.consult_tips {background-color:#FFF4E2;font-size:12px;line-height:1.5;color:#0dcccc;text-align:justify;}
+.consult_tips text {color:#f55;}

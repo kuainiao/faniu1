@@ -1,0 +1,14 @@
+/* pages/index/book.wxss */
+textarea{
+  padding: 10px;
+  box-sizing: border-box;
+  height: 400rpx;
+}
+.tab text{
+  display: inline-block;
+  box-sizing: border-box;
+}
+.active{
+  color: #f42c2c;
+  border-bottom: 2px solid #f42c2c;
+}

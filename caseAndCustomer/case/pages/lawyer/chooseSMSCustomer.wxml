@@ -1,0 +1,17 @@
+<!--pages/lawyer/chooseSMSCustomer.wxml-->
+<view class="container min_height_100">
+  <form bindsubmit="lawcaseLitigantNotice">
+    <view class="list">
+      <checkbox-group name="uids">
+        <view class="item" wx:for="{{litigantsArr}}" wx:key="id" >
+          <view class="item_l font_16 flex">
+            <view class="w_70">{{item.name}}</view>
+            <view class="flex_1">{{item.mobile}}</view>
+          </view>
+          <checkbox value="{{item.id}}" disabled='{{item.notice==1}}'></checkbox>
+        </view>
+      </checkbox-group>
+    </view>
+    <button class="submit" formType="submit">确定</button>
+  </form>
+</view>

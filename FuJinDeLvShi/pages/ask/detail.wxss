@@ -1,0 +1,20 @@
+/* pages/content/content.wxss */
+@import "../template/block/ask.wxss";
+@import '../template/widget/footer.wxss';
+@import "../template/item_lawyer/item_lawyer.wxss";
+
+/*  赞赏金额  */
+.popbox{background:rgba(0,0,0,0.5);position:fixed;width:100%;height:100%;top:0;left:0;z-index:1000;}
+.popbox_cc{position:absolute;width:86%;left:7%;top:0;border-radius:4px;border:2px solid #f00;background:#fff;box-sizing: border-box;padding:16px 10px;top:50%;margin-top:-93px;}
+.popbox_tt{font-size:0.875rem;}
+.popbox .weui-flex{flex-wrap:wrap;}
+.popbox .weui-flex .radio{border:1px solid #f00;border-radius:4px;color:#f00;width:29.33%;margin:10px 2% 0;box-sizing: border-box;height:54px;position:relative;overflow: hidden;}
+.popbox .weui-flex .radio:active view{background:#f00;color:#fff;}
+.popbox .weui-flex .radio view{height:54px;line-height:54px;position:absolute;width:100%;left:0;top:0;background:#fff;font-size:0.875rem;}
+.popbox .weui-flex .radio view text{font-size:1.125rem;font-weight:bold;}
+.popbox_close{position:absolute;padding:10px 15px;right:10px;top:6px;font-size:0.875rem;color:#666;}
+
+/* 赞赏人员头像显示 */
+.zanbox_tt{color:#a0a0a0;font-size:0.75rem;padding-top:10px;}
+.zanbox{justify-content: center;flex-wrap:wrap;}
+.zanbox view{width:2rem;height:2rem;border-radius:50%;margin:5px;}

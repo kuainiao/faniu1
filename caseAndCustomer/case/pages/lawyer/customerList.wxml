@@ -1,0 +1,41 @@
+<!--pages/lawyer/customerList.wxml-->
+<view class="list">
+  <view class="item" wx:for="{{litigantsArr}}" wx:key="id">
+    <view class="item_l font_16 flex">
+        <view class="w_70">{{item.name}}</view>
+        <view class="flex_1">{{item.mobile}}</view>
+      </view>
+    <image class="item_r" src="../../images/delete.png" bindtap='litigantDel' data-id='{{item.id}}'></image>
+  </view>
+</view>
+<view class="add clearfix" bindtap='addMaskShow'>
+  <image src='../../images/add.png' class="img"></image>
+</view>
+<view class="mask {{add?'show':'hide'}}" bindtap='addMaskHide'></view>
+<view class="mask_container {{add?'show':'hide'}}">
+  <view class="title">添加当事人</view>
+  <form bindsubmit="litigantAdd">
+    <view class="input_row">
+      <input placeholder='姓名' class="name" name="name"/>
+      <input placeholder='手机号' class="tel" maxlength='11' type='number' name="mobile"/>
+    </view>
+    <view class="btn_box">
+      <button class="btn cancel" bindtap='addMaskHide'>取消</button>
+      <button class="btn sure" formType="submit">确认</button>
+    </view>
+  </form>
+</view>
+<!--<view class="nav_list">
+  <view class="nav_item" bindtap='gotoNewCase'>
+    <image src="" class="nav_icon"></image>
+    <view class="nav_text">创建新案件</view>
+  </view>
+  <view class="nav_item" bindtap='gotoCaseList'>
+    <image src="" class="nav_icon"></image>
+    <view class="nav_text">我的案件</view>
+  </view>
+  <view class="nav_item active" bindtap='gotoCustomerList'>
+    <image src="" class="nav_icon"></image>
+    <view class="nav_text">我的当事人</view>
+  </view>
+</view>-->

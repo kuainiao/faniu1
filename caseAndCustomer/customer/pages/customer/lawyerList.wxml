@@ -1,0 +1,11 @@
+<!--pages/customer/lawyerList.wxml-->
+<view class="list">
+  <view class="item" wx:for="{{lawyersArray}}" wx:key="openid">
+    <image src="{{item.avatar}}" class="item_l"></image>
+    <view class="item_m">
+      <view class="title font_16 bold mb_14">{{item.name}}</view>
+      <view class="sub_title font_12 color_9">{{item.firm}}</view>
+    </view>
+    <image src="../../images/call.png" class="item_r" data-tel="{{item.tel}}" bindtap='call'></image>
+  </view>
+</view>

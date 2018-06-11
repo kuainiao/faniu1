@@ -1,0 +1,45 @@
+/**index.wxss**/
+.header{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #f42c2c;
+}
+.icon_position{
+  width: 40rpx;
+  height: 46rpx;
+}
+.icon_tel{
+  width: 50rpx;
+  height: 50rpx;
+}
+.icon_index{
+  display: block;
+  width: 60rpx;
+  height: 50rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+.item{
+  border-bottom: 1px solid #e3e3e3;
+}
+.item:last-child{
+  border-bottom: none;
+}
+.imglist{
+
+}
+.imgitem{
+  width: 33.333%;
+  box-sizing: border-box;
+}
+.imgitem image{
+  display: block;
+  width: 100%;
+  height: 190rpx;
+  background-color: #ccc;
+}
+.icon_zan,.icon_collect{
+  width: 29rpx;
+  height: 28rpx;
+}
